@@ -109,3 +109,24 @@ export const talksPubs: talksPubsData[] = [
         tag: 'Tech Talk'
     }
 ]
+
+
+export const techstackIcons: string[] = [
+    '/techstackIcons/cpp.svg',
+    '/techstackIcons/css3.svg',
+    '/techstackIcons/docker.svg',
+    '/techstackIcons/figma.svg',
+    '/techstackIcons/html5.svg',
+    '/techstackIcons/js.svg',
+    '/techstackIcons/mongo.svg',
+    '/techstackIcons/next2.svg',
+    '/techstackIcons/node.svg',
+    '/techstackIcons/postgresql.svg',
+    '/techstackIcons/pyton.svg',
+    '/techstackIcons/react.svg',
+    '/techstackIcons/redux.svg',
+    '/techstackIcons/tailwind.svg',
+    '/techstackIcons/typescript.svg',
+    '/techstackIcons/vb.svg',
+    '/techstackIcons/vite.svg'
+]
