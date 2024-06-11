@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { nunito } from "./ui/fonts";
 
@@ -16,7 +15,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} antialiased`}>{children}</body>
+      <body className={`${nunito.className} antialiased`}>
+        {children}
+        {/* 
+        <div>
+          <header/>
+          <div>
+            <SideNav/> 
+            {children}
+          </div>
+        </div>
+        */}
+      </body>
     </html>
   );
 }

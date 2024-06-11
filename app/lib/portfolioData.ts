@@ -55,7 +55,7 @@ export const experience: experienceData[] = [
 export const projects: projectData[] = [
     {
         title: 'Docketeer',
-        screenshot: null,
+        screenshot: '/projects/docketeer-container-tab-screenshot.png',
         description: 'A user-friendly container management Docker Desktop extension with intuitive interfaces, and visualization tools for Docker containers and Kubernetes clusters.',
         externalLink: 'https://hub.docker.com/extensions/docketeerxiv/docketeer-extension',
         githubLink: 'https://github.com/open-source-labs/Docketeer-extension.git', // Could I have stars, forks, and Such here?
@@ -63,7 +63,7 @@ export const projects: projectData[] = [
     },
     {
         title: 'Docketeer.io',
-        screenshot: null,
+        screenshot: '/projects/docketeer-io.png',
         description: 'A Landing Page for Docketeer, showcasing demos of features, as well as its recent and continuous contributors.',
         externalLink: 'https://docketeer.io/',
         githubLink: null,
@@ -71,7 +71,7 @@ export const projects: projectData[] = [
     },
     {
         title: 'HabitPop',
-        screenshot: null,
+        screenshot: '/projects/HabitPop-Logo-Dark.png',
         description: 'A Habit Tracking App with a satisfying pop! A personal project inspired by a whiteboard I used to keep hung up in my room to track my various habits. Utilizes Expo for the compiling, routing, and testing.',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/habit365.git',
@@ -79,7 +79,7 @@ export const projects: projectData[] = [
     },
     {
         title: 'Rewatch Time',
-        screenshot: null,
+        screenshot: '/projects/RewatchTime-Login.png',
         description: 'Experimental App that randomly selects episodes of the show Adventure Time for you to watch and tracks which episodes you\'ve watched or favorited. This uses TypeScript, React, Node.JS, Express.JS, with a PostgreSQL instance launched on AWS. Database data, schema, and instance was collected, architected, and launched by yours truly.',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/Rewatch-Time.git',
@@ -98,13 +98,13 @@ export const projects: projectData[] = [
 export const talksPubs: talksPubsData[] = [
     {
         title: 'Navigating the Seas of Docker with Docketeer v15.0',
-        screenshot: '',
+        screenshot: '/projects/talksAndPubs/Docketeer15-Article-Icon.png',
         externalLink: 'https://medium.com/@christiandoescoding/navigating-the-seas-of-docker-with-docketeer-v15-0-ad5bd9540d14',
         tag: 'Medium'
     },
     {
         title: 'The Internet of Things',
-        screenshot: '',
+        screenshot: '/projects/talksAndPubs/TechTalk.png',
         externalLink: 'https://www.linkedin.com/in/cris-morales/',
         tag: 'Tech Talk'
     }
