@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 
-export default function Hero() {
+export default function Projects() {
 
     return (
         <section id='projects'>
