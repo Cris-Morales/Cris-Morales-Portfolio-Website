@@ -1,25 +1,12 @@
-'use client'
 import Link from "next/link"
 
 export default function Navbar() {
-
-    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        e.preventDefault();
-
-        const href = e.currentTarget.href;
-        const targetId = href.replace(/.*\#/, "");
-        const elem = document.getElementById(targetId);
-        window.scrollTo({
-            top: elem?.getBoundingClientRect().top,
-            behavior: "smooth",
-        });
-    };
 
     return (
         <nav className="flex flex-col fixed">
             <ul>
                 <li>
-                    <Link className='bg-slate-700 active' href='#home' onClick={handleScroll}>
+                    <Link className='bg-slate-700 active' href='#home'>
                         <span className="" />
                         <span className="">
                             Home
@@ -27,7 +14,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='#about' className='bg-slate-700' onClick={handleScroll}>
+                    <Link href='#about' className='bg-slate-700' >
                         <span className="" />
                         <span className="">
                             About Me
@@ -35,7 +22,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='#experience' className='bg-slate-700' onClick={handleScroll}>
+                    <Link href='#experience' className='bg-slate-700'>
                         <span className="" />
                         <span className="">
                             Experience
@@ -43,7 +30,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='#projects' className='bg-slate-700' onClick={handleScroll}>
+                    <Link href='#projects' className='bg-slate-700'>
                         <span className="" />
                         <span className="">
                             Projects
@@ -51,7 +38,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='#contact' className='bg-slate-700' onClick={handleScroll}>
+                    <Link href='#contact' className='bg-slate-700'>
                         <span className="" />
                         <span className="">
                             Message Me
