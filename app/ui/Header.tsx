@@ -4,8 +4,8 @@ import Link from "next/link"
 export default function Header() {
 
     return (
-        <header className="">
-            <ul>
+        <header className="flex justify-between fixed w-screen h-header">
+            <ul className="flex">
                 <li>
                     <Link href='https://github.com/Cris-Morales'>
                         <Image

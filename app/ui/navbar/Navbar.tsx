@@ -16,7 +16,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="flex flex-col justify-center fixed">
+        <nav className="flex flex-col fixed">
             <ul>
                 <li>
                     <Link className='bg-slate-700 active' href='#home' onClick={handleScroll}>
