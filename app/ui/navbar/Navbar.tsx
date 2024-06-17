@@ -1,50 +1,62 @@
 'use client'
-import Image from "next/image"
+import Link from "next/link"
 
 export default function Navbar() {
 
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
+
+        const href = e.currentTarget.href;
+        const targetId = href.replace(/.*\#/, "");
+        const elem = document.getElementById(targetId);
+        window.scrollTo({
+            top: elem?.getBoundingClientRect().top,
+            behavior: "smooth",
+        });
+    };
+
     return (
-        <nav>
+        <nav className="flex flex-col justify-center fixed">
             <ul>
                 <li>
-                    <a className='active' href='#home'>
+                    <Link className='bg-slate-700 active' href='#home' onClick={handleScroll}>
                         <span className="" />
                         <span className="">
                             Home
                         </span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href='#about'>
+                    <Link href='#about' className='bg-slate-700' onClick={handleScroll}>
                         <span className="" />
                         <span className="">
                             About Me
                         </span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href='#experience'>
+                    <Link href='#experience' className='bg-slate-700' onClick={handleScroll}>
                         <span className="" />
                         <span className="">
                             Experience
                         </span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href='#projects'>
+                    <Link href='#projects' className='bg-slate-700' onClick={handleScroll}>
                         <span className="" />
                         <span className="">
                             Projects
                         </span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href='#contact'>
+                    <Link href='#contact' className='bg-slate-700' onClick={handleScroll}>
                         <span className="" />
                         <span className="">
                             Message Me
                         </span>
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </nav>

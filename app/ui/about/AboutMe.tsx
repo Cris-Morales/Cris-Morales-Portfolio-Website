@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function AboutMe() {
 
     return (
-        <section id='about'>
+        <section id='about' className="h-screen">
             <div>
                 About
             </div>

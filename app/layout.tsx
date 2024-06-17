@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { nunito } from "./ui/fonts";
-import Navbar from "./ui/Navbar";
+import Navbar from "./ui/navbar/Navbar";
 import Header from "./ui/Header";
+import Script from "next/script";
 
 
 export const metadata: Metadata = {
@@ -15,11 +16,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="en">
       <body className={`${nunito.className} antialiased`}>
-        {/* {children} */}
-
         <div>
           <Header />
           <div>
@@ -27,7 +29,6 @@ export default function RootLayout({
             {children}
           </div>
         </div>
-
       </body>
     </html>
   );

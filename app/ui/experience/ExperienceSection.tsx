@@ -2,7 +2,7 @@
 export default function Experience() {
 
     return (
-        <section id='experience'>
+        <section id='experience' className="h-screen">
             <div>
                 Experience
             </div>
