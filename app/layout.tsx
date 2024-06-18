@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { nunito } from "./ui/fonts";
-import Navbar from "./ui/navbar/Navbar";
 import Header from "./ui/Header";
-import Script from "next/script";
-
 
 export const metadata: Metadata = {
   title: "Cristian Morales",
@@ -18,16 +15,12 @@ export default function RootLayout({
 }>) {
 
 
-
   return (
     <html lang="en" className=" scroll-smooth">
       <body className={`${nunito.className} antialiased`}>
         <div className="flex h-screen flex-col" id='home'>
           <Header />
-          <div className="flex p-content">
-            <Navbar />
-            {children}
-          </div>
+          {children}
         </div>
       </body>
     </html>

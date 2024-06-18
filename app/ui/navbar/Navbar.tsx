@@ -1,6 +1,47 @@
 import Link from "next/link"
+import { ElementType, useEffect, useState } from "react"
 
+
+
+const navDict: any = {
+    'hero': '#home',
+    'about': '#about',
+    'experience': '#experience',
+    'projects': '#projects',
+    'talks': '#projects',
+    'contact': '#contact'
+}
 export default function Navbar() {
+    const [active, setActive] = useState('hero');
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActive(entry.target.id);
+                }
+            })
+        });
+
+        const sections = document.querySelectorAll('section');
+
+        sections.forEach((el) => observer.observe(el));
+    }, []);
+
+
+    useEffect(() => {
+        console.log('change active class for ', active);
+
+        const navLinks = document.querySelectorAll(`nav ul li a`);
+        const activeLink = document.querySelector(`a[href="${navDict[active]}"]`);
+
+
+        navLinks.forEach((el: Element | null) => {
+            el == activeLink ? el?.classList.add('active') : el?.classList.remove('active');
+
+
+        })
+    }, [active])
 
     return (
         <nav className="flex flex-col fixed">
