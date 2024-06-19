@@ -5,6 +5,7 @@ export default function Header() {
 
     return (
         <header className="flex justify-between fixed w-screen h-header py-3 px-4 mt-1 md:px-7">
+            {/* consider  border border-primary rounded-xl */}
             <ul className="flex gap-3 items-center">
                 <li>
                     <Link href='https://github.com/Cris-Morales'>
