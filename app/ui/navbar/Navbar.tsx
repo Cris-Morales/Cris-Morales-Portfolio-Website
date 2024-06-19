@@ -36,42 +36,42 @@ export default function Navbar() {
 
     return (
         <nav className="hidden md:m-nav md:flex md:flex-col md:fixed md:h-screen md:justify-center">
-            <ul className="md:flex md:flex-col md:h-nav md:justify-between md:top-nav md:p-1">
+            <ul className="flex flex-col h-nav justify-between top-nav p-1">
                 <li>
-                    <Link className='bg-slate-700 active' href='#home'>
-                        <span className="" />
-                        <span className="text-primary">
+                    <Link className='text-primary bg-slate-700 flex items-center active' href='#home'>
+                        <div className="navLine" />
+                        <span className="">
                             Home
                         </span>
                     </Link>
                 </li>
                 <li>
-                    <Link href='#about' className='text-primary' >
-                        <span className="" />
+                    <Link href='#about' className='text-primary bg-slate-700 flex items-center' >
+                        <div className="navLine" />
                         <span className="">
                             About Me
                         </span>
                     </Link>
                 </li>
                 <li>
-                    <Link href='#experience' className='text-primary'>
-                        <span className="" />
+                    <Link href='#experience' className='text-primary bg-slate-700 flex items-center'>
+                        <div className="navLine" />
                         <span className="">
                             Experience
                         </span>
                     </Link>
                 </li>
                 <li>
-                    <Link href='#projects' className='text-primary'>
-                        <span className="" />
+                    <Link href='#projects' className='text-primary bg-slate-700 flex items-center'>
+                        <div className="navLine" />
                         <span className="">
                             Projects
                         </span>
                     </Link>
                 </li>
                 <li>
-                    <Link href='#contact' className='text-primary'>
-                        <span className="" />
+                    <Link href='#contact' className='text-primary bg-slate-700 flex items-center'>
+                        <div className="navLine" />
                         <span className="">
                             Message Me
                         </span>

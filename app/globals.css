@@ -32,3 +32,12 @@ body {
 a[class*="active"] {
   font-weight: bold;
 }
+
+.navLine {
+  /* border-t-2 border-primary w-10 mx-1 */
+  border-top-width: 2px;
+  border-color: #52FFC2;
+  width: 2.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
