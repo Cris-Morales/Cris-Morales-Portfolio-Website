@@ -10,9 +10,9 @@ import Navbar from "./ui/navbar/Navbar";
 export default function Page() {
 
   return (
-    <main className="p-content mt-7 md:flex ">
+    <main className="p-content mt-7 md:flex">
       <Navbar />
-      <div className="md:m-content">
+      <div className=" gap-3 md:m-content">
         <Hero />
         <AboutMe />
         <Experience />

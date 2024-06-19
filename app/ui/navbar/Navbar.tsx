@@ -35,8 +35,8 @@ export default function Navbar() {
     }, [active])
 
     return (
-        <nav className="hidden md:flex md:flex-col md:fixed">
-            <ul>
+        <nav className="hidden md:m-nav md:flex md:flex-col md:fixed md:h-screen md:justify-center">
+            <ul className="md:flex md:flex-col md:h-nav md:justify-between md:top-nav md:p-1">
                 <li>
                     <Link className='bg-slate-700 active' href='#home'>
                         <span className="" />

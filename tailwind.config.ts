@@ -40,14 +40,16 @@ const config: Config = {
       },
       height: {
         "section": '100vh',
-        "header": '6vh'
+        "header": '6vh',
+        'nav': '268px'
       },
       padding: {
         "content": '6vh 0px 0px 0px',
         "main": '0px 0px 0px 180px'
       },
       margin: {
-        "content": '0px 0px 0px 180px'
+        "content": '0px 0px 0px 180px',
+        "nav": '-9vh 0px 0px 0px'
       }
     },
   },
