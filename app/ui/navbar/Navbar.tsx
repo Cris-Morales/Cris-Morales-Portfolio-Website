@@ -34,6 +34,7 @@ export default function Navbar() {
         })
     }, [active])
 
+
     return (
         <nav className="hidden md:m-nav md:flex md:flex-col md:fixed md:h-screen md:justify-center">
             <ul className="flex flex-col h-nav justify-between top-nav p-1">

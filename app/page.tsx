@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <main className="p-content mt-7 md:flex">
       <Navbar />
-      <div className=" gap-3 md:m-content">
+      <div className="md:m-content">
         <Hero />
         <AboutMe />
         <Experience />
