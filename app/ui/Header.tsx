@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Header() {
 
     return (
-        <header className="flex justify-between fixed w-screen h-header py-3 px-4 md:px-7">
+        <header className="flex justify-between fixed w-screen h-header py-3 px-4 mt-1 md:px-7">
             <ul className="flex gap-3 items-center">
                 <li>
                     <Link href='https://github.com/Cris-Morales'>
@@ -37,8 +37,8 @@ export default function Header() {
                     </Link>
                 </li>
             </ul>
-            <div className=" grid content-center">
-                <Link href='/CristianMorales-Resume.pdf' download className=" text-primary font-bold text-base">
+            <div className=" grid content-center text-center">
+                <Link href='/CristianMorales-Resume.pdf' download className=" text-primary font-bold text-base text-center content-center">
                     View Resume
                 </Link>
             </div>
