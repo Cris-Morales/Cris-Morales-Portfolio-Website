@@ -7,15 +7,12 @@ import TalksAndPubs from "./ui/projects/talksAndPubs/TalksAndPubs";
 import Contact from "./ui/contact/Contact";
 import Navbar from "./ui/navbar/Navbar";
 
-import { useState, useEffect } from "react";
-
 export default function Page() {
 
-
   return (
-    <main className="flex p-content">
+    <main className="p-content mt-7 md:flex ">
       <Navbar />
-      <div className=" p-main">
+      <div className="md:m-content">
         <Hero />
         <AboutMe />
         <Experience />

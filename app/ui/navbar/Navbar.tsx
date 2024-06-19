@@ -1,7 +1,5 @@
 import Link from "next/link"
-import { ElementType, useEffect, useState } from "react"
-
-
+import { useEffect, useState } from "react"
 
 const navDict: any = {
     'hero': '#home',
@@ -11,6 +9,7 @@ const navDict: any = {
     'talks': '#projects',
     'contact': '#contact'
 }
+
 export default function Navbar() {
     const [active, setActive] = useState('hero');
 
@@ -22,40 +21,32 @@ export default function Navbar() {
                 }
             })
         });
-
         const sections = document.querySelectorAll('section');
-
         sections.forEach((el) => observer.observe(el));
     }, []);
 
 
     useEffect(() => {
-        console.log('change active class for ', active);
-
         const navLinks = document.querySelectorAll(`nav ul li a`);
         const activeLink = document.querySelector(`a[href="${navDict[active]}"]`);
-
-
         navLinks.forEach((el: Element | null) => {
             el == activeLink ? el?.classList.add('active') : el?.classList.remove('active');
-
-
         })
     }, [active])
 
     return (
-        <nav className="flex flex-col fixed">
+        <nav className="hidden md:flex md:flex-col md:fixed">
             <ul>
                 <li>
                     <Link className='bg-slate-700 active' href='#home'>
                         <span className="" />
-                        <span className="">
+                        <span className="text-primary">
                             Home
                         </span>
                     </Link>
                 </li>
                 <li>
-                    <Link href='#about' className='bg-slate-700' >
+                    <Link href='#about' className='text-primary' >
                         <span className="" />
                         <span className="">
                             About Me
@@ -63,7 +54,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='#experience' className='bg-slate-700'>
+                    <Link href='#experience' className='text-primary'>
                         <span className="" />
                         <span className="">
                             Experience
@@ -71,7 +62,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='#projects' className='bg-slate-700'>
+                    <Link href='#projects' className='text-primary'>
                         <span className="" />
                         <span className="">
                             Projects
@@ -79,7 +70,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='#contact' className='bg-slate-700'>
+                    <Link href='#contact' className='text-primary'>
                         <span className="" />
                         <span className="">
                             Message Me

@@ -30,5 +30,5 @@ body {
 }
 
 a[class*="active"] {
-  background-color: aqua;
+  font-weight: bold;
 }

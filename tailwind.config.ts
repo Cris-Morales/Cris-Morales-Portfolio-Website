@@ -7,6 +7,31 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      'light-text': 'FFFFFF',
+      'dark-text': '#01060F',
+      'background': '#031026',
+      'primary': '#52FFC2',
+      'accent': '#5DD0FD',
+      'form': '#D2E9EF'
+    },
+    fontSize: {
+      sm: '0.750rem',
+      base: '1rem',
+      xl: '1.333rem',
+      '2xl': '1.777rem',
+      '3xl': '2.369rem',
+      '4xl': '3.158rem',
+      '5xl': '4.210rem',
+    },
+    fontFamily: {
+      heading: 'Nunito',
+      body: 'Nunito',
+    },
+    fontWeight: {
+      normal: '400',
+      bold: '700',
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -22,7 +47,7 @@ const config: Config = {
         "main": '0px 0px 0px 180px'
       },
       margin: {
-        "hero": '6vh 0px 0px 0px'
+        "content": '0px 0px 0px 180px'
       }
     },
   },
