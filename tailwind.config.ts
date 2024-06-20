@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import Headshot from "./app/ui/hero/Headshot";
 
 const config: Config = {
   content: [
@@ -11,7 +12,7 @@ const config: Config = {
       'light-text': 'FFFFFF',
       'dark-text': '#01060F',
       'background': '#031026',
-      'primary': '#52FFC2',
+      'primary': '#32FFB7',
       'accent': '#5DD0FD',
       'form': '#D2E9EF'
     },
@@ -39,7 +40,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       height: {
-        "section": '100vh',
+        "section": '105vh',
         "header": '6vh',
         'nav': '268px'
       },
@@ -50,6 +51,13 @@ const config: Config = {
       margin: {
         "content": '0px 0px 0px 180px',
         "nav": '-9vh 0px 0px 0px'
+      },
+      minWidth: {
+        'headshot': '454px',
+        'carousel': '350px'
+      },
+      maxWidth: {
+        'carousel': '515px'
       }
     },
   },
