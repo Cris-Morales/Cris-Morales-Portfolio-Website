@@ -4,8 +4,10 @@ import Link from "next/link"
 export default function Header() {
 
     return (
-        <header className="flex justify-between fixed w-screen h-header py-3 px-4 mt-1 md:px-7">
-            {/* consider  border border-primary rounded-xl */}
+        <header className="flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 bg-background">
+            {/* consider  border border-primary rounded-xl 
+                also, want to remove bg-background for a cool fadaway effect, that's a placeholder because it annoys me
+            */}
             <ul className="flex gap-3 items-center">
                 <li>
                     <Link href='https://github.com/Cris-Morales'>
