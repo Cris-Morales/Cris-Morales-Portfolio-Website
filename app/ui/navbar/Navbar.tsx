@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { useEffect, useState } from "react"
 
 const navDict: any = {
@@ -39,44 +38,44 @@ export default function Navbar() {
         <nav className="hidden md:m-nav md:flex md:flex-col md:fixed md:h-screen md:justify-center">
             <ul className="flex flex-col h-nav justify-between top-nav p-1">
                 <li>
-                    <Link className='text-primary bg-slate-700 flex items-center active' href='#home'>
+                    <a className='text-primary bg-slate-700 flex items-center active' href='#home'>
                         <div className="navLine" />
                         <span className="">
                             Home
                         </span>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href='#about' className='text-primary bg-slate-700 flex items-center' >
+                    <a href='#about' className='text-primary bg-slate-700 flex items-center' >
                         <div className="navLine" />
                         <span className="">
                             About Me
                         </span>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href='#experience' className='text-primary bg-slate-700 flex items-center'>
+                    <a href='#experience' className='text-primary bg-slate-700 flex items-center'>
                         <div className="navLine" />
                         <span className="">
                             Experience
                         </span>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href='#projects' className='text-primary bg-slate-700 flex items-center'>
+                    <a href='#projects' className='text-primary bg-slate-700 flex items-center'>
                         <div className="navLine" />
                         <span className="">
                             Projects
                         </span>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href='#contact' className='text-primary bg-slate-700 flex items-center'>
+                    <a href='#contact' className='text-primary bg-slate-700 flex items-center'>
                         <div className="navLine" />
                         <span className="">
                             Message Me
                         </span>
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </nav>

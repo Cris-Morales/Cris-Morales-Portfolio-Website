@@ -1,7 +1,6 @@
 import Headshot from "./Headshot"
 import { techstackIcons } from "@/app/lib/portfolioData"
 import Image from "next/image"
-import Link from "next/link"
 
 export default function Hero() {
     const myTitles: string[] = ['Software', 'Mechanical', 'Fullstack', 'Robotics']
@@ -34,9 +33,9 @@ export default function Hero() {
                         )
                     })}
                 </div>
-                <Link className="text-dark-text font-bold text-xl bg-primary rounded-xl h-32 p-3" href='#contact'>
+                <a className="text-dark-text font-bold text-xl bg-primary rounded-xl h-32 p-3" href='#contact'>
                     Work with Me!
-                </Link>
+                </a>
             </div>
         </section>
     )
