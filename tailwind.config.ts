@@ -29,10 +29,6 @@ const config: Config = {
       heading: 'Nunito',
       body: 'Nunito',
     },
-    fontWeight: {
-      normal: '400',
-      bold: '700',
-    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -58,7 +54,7 @@ const config: Config = {
       },
       maxWidth: {
         'carousel': '515px'
-      }
+      },
     },
   },
   plugins: [],

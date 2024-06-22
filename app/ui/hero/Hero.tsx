@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Hero() {
-    const myTitles: string[] = ['Software', 'Mechanical', 'Fullstack']
+    const myTitles: string[] = ['Software', 'Mechanical', 'Fullstack', 'Robotics']
 
 
     return (
@@ -33,7 +33,7 @@ export default function Hero() {
                         )
                     })}
                 </div>
-                <Link className="text-dark-text font-normal text-xl bg-primary rounded-xl h-32 p-3" href='#contact'>
+                <Link className="text-dark-text font-bold text-xl bg-primary rounded-xl h-32 p-3" href='#contact'>
                     Work with Me!
                 </Link>
             </div>

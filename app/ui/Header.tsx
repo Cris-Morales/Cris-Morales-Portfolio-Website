@@ -5,8 +5,10 @@ export default function Header() {
 
     return (
         <header className="flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 bg-background">
+
             {/* consider  border border-primary rounded-xl 
                 also, want to remove bg-background for a cool fadaway effect, that's a placeholder because it annoys me
+                shadow-background shadow-md bg-opacity-90 backdrop-blur-sm is kinda alright
             */}
             <ul className="flex gap-3 items-center">
                 <li>
