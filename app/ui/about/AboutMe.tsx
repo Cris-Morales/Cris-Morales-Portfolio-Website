@@ -9,7 +9,7 @@ export default function AboutMe() {
                 About Me
             </h3>
             <article>
-                <p className="text-white-text text-xl border-2 border-primary rounded-3xl p-5 m-5">
+                <p className="text-white-text text-xl border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35">
                     I began my professional journey as a Mechanical Engineer, where I first encountered programming through MatLab to analyze mathematical models and C++ for robotics and controls. A few years into my career, I felt a strong pull towards software-centric projects. This led me to dive into JavaScript and web development, ultimately securing a spot with the competitive tech accelerator OSLabs.
                     <br /><br />
                     Today, I am a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 15,000 downloads on DockerHub and 500 stars on GitHub.

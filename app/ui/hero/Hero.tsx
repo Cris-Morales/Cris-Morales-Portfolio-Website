@@ -29,6 +29,7 @@ export default function Hero() {
                                 alt={icon.slice(16, 26)}
                                 width={50}
                                 height={50}
+                                key={icon}
                             />
                         )
                     })}
