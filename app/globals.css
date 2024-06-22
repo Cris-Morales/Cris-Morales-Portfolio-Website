@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --nav-transition-duration: 200ms;
+  --nav-transition-duration: 300ms;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,18 +33,23 @@ body {
 nav a[class*="active"] {
   transition-duration: var(--nav-transition-duration);
   font-weight: bold;
+  text-shadow:
+    /* 0px 0px 1rem #52FFC2, */
+    0px 0px 1.75rem #52FFC2,
+    0px 0px 2.0rem #52FFC2;
 }
 
 /* ngl I kind of don't like the hover effect just being the active effect. The presentation is a tad weird. I want to try the glow effect instead.*/
 nav a:hover {
   transition-duration: var(--nav-transition-duration);
   font-weight: bold;
+
 }
 
 a:hover .navLine {
   transition-duration: var(--nav-transition-duration);
   width: 3.5rem;
-  border-top-width: 1.5px
+  border-top-width: 1.5px;
 }
 
 .navLine {
@@ -60,6 +65,7 @@ a[class*="active"] .navLine {
   transition-duration: var(--nav-transition-duration);
   width: 3.5rem;
   border-top-width: 1.5px;
+  box-shadow: 0px 0px 1.75rem 2px #52FFC2;
 }
 
 .textGlow {
@@ -68,8 +74,8 @@ a[class*="active"] .navLine {
 
 .textGlow:hover {
   text-shadow:
-    0px 0px 1rem #32FFB7,
-    0px 0px 1.75rem #32FFB7,
-    0px 0px 2.0rem #32FFB7;
+    0px 0px 1rem #52FFC2,
+    0px 0px 1.75rem #52FFC2,
+    0px 0px 2.0rem #52FFC2;
   transition: 300ms;
 }
