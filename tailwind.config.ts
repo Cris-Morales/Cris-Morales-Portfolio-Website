@@ -39,7 +39,9 @@ const config: Config = {
       height: {
         "hero": '105vh',
         "header": '8vh',
-        'nav': '268px'
+        'nav': '268px',
+        'section': '100vh',
+        'section2': '1080px'
       },
       padding: {
         "main": '0px 0px 0px 180px',
@@ -56,7 +58,7 @@ const config: Config = {
         'carousel': '515px'
       },
       width: {
-        'about-content': '75vh'
+        'about-content': '850px'
       }
     },
   },

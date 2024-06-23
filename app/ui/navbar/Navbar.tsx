@@ -35,7 +35,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="hidden xl:flex xl:flex-col xl:fixed xl:h-screen xl:justify-center z-10">
+        <nav className="hidden 2xl:flex 2xl:flex-col 2xl:fixed 2xl:h-screen 2xl:justify-center z-10">
             <ul className="flex flex-col h-nav justify-between top-nav p-1">
                 <li>
                     <a className='text-primary bg-slate-700 flex items-center active' href='#home'>
