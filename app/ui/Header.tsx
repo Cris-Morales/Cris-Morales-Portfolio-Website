@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Header() {
 
     return (
-        <header className="flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 md:z-10 bg-background">
+        <header className=" z-50 flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 bg-background">
 
             {/* consider  border border-primary rounded-xl 
                 also, want to remove bg-background for a cool fadaway effect, that's a placeholder because it annoys me
@@ -12,7 +12,7 @@ export default function Header() {
             */}
             <ul className="flex gap-3 items-center">
                 <li>
-                    <Link href='https://github.com/Cris-Morales'>
+                    <Link href='https://github.com/Cris-Morales' className="iconGlow">
                         <Image
                             src="/github.svg"
                             alt="Cristian's Github Profile Link"
@@ -22,7 +22,8 @@ export default function Header() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='https://www.linkedin.com/in/Cris-Morales'>
+                    <Link href='https://www.linkedin.com/in/Cris-Morales'
+                        className="iconGlow">
                         <Image
                             src="/linkedIn.svg"
                             alt="Cristian's LinkedIn Profile Link"
@@ -32,7 +33,8 @@ export default function Header() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='mailto:CrisMorales@protonmail.com'>
+                    <Link href='mailto:CrisMorales@protonmail.com'
+                        className="iconGlow">
                         <Image
                             src="/email.svg"
                             alt="Cristian's Buisness Email"

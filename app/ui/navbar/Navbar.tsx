@@ -16,6 +16,7 @@ export default function Navbar() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
+                    console.log(entry.target.id, entry.intersectionRatio)
                     setActive(entry.target.id);
                 }
             })
@@ -29,7 +30,7 @@ export default function Navbar() {
         const navLinks = document.querySelectorAll(`nav ul li a`);
         const activeLink = document.querySelector(`a[href="${navDict[active]}"]`);
         navLinks.forEach((el: Element | null) => {
-            el == activeLink ? el?.classList.add('active') : el?.classList.remove('active');
+            el === activeLink ? el?.classList.add('active') : el?.classList.remove('active');
         })
     }, [active])
 

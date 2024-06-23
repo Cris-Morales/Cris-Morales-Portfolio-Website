@@ -74,9 +74,18 @@ a[class*="active"] .navLine {
 
 .textGlow:hover {
   text-shadow:
-    0px 0px 1rem #52FFC2,
-    0px 0px 1.75rem #52FFC2,
-    0px 0px 2.0rem #52FFC2;
+    0 0 1rem #52FFC2,
+    0 0 1.75rem #52FFC2,
+    0 0 2.0rem #52FFC2;
+  transition: 300ms;
+}
+
+.iconGlow:hover {
+  filter: drop-shadow(0 0 0.8rem #52FFC2) drop-shadow(0 0 0.5rem #52ffc27a);
+  transition: 300ms;
+}
+
+.iconGlow {
   transition: 300ms;
 }
 

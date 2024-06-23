@@ -10,14 +10,14 @@ export default function TalksAndPubs() {
                 alt="External Link Thumbnail to Medium Article on the Release of Docketeer 15"
                 width={454}
                 height={530.11}
-                priority
+                className="h-auto"
             />
             <Image
                 src="/projects/talksAndPubs/TechTalk.png"
                 alt="External Link Thumbnail to Tech Talk on The Internet of Things"
                 width={454}
                 height={530.11}
-                priority
+                className="h-auto"
             />
         </section>
     )

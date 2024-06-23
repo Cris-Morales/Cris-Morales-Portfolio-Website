@@ -22,28 +22,27 @@ export default function AboutMe() {
                     <br /><br />
                     When I'm not working, you can find me spending time with my wife, training in boxing, grappling, or mixed martial arts, caring for my animals, or gaming with friends.
                 </p>
-                <div className="w-full flex flex-col items-center">
-                    {/* have 2 columns, relatively positioned, 2 pics in left 1 pic in right, center both of them in the space given, same Z order, move the right over a fixed amount, left over a fixed amount, feel like genius */}
+                <div className=" w-11/12 flex flex-col items-center">
                     <Image
                         src="/aboutMe/meAndPartner.jpg"
                         alt="Me and my wife."
-                        width={285}
-                        height={325}
-                        className="rounded-3xl relative right-32 z-20"
+                        width={300}
+                        height={338}
+                        className="rounded-3xl relative right-32 top-20 z-20 min-w-60 max-w-72"
                     />
                     <Image
                         src="/aboutMe/meAndDoggo.jpg"
                         alt="Me and our family Chonk, I mean, Dog in a tortilla blanket."
-                        width={287}
-                        height={287}
-                        className="rounded-3xl relative left-32 -top-24 z-10"
+                        width={300}
+                        height={305}
+                        className="rounded-3xl relative left-32 z-10  min-w-60 max-w-72"
                     />
                     <Image
                         src="/aboutMe/jiuJitsuTournament.jpg"
                         alt="Me, at my 3rd Grappling Tournament at Blue Belt, getting bronze because I was late to my match against the silver metal winner."
                         width={300}
                         height={306}
-                        className="rounded-3xl relative right-32 bottom-44"
+                        className="rounded-3xl relative right-32 bottom-20  min-w-60 max-w-72"
                     />
                 </div>
             </article>
