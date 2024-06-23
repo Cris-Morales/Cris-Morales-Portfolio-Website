@@ -33,7 +33,7 @@ export default function Hero() {
                         )
                     })}
                 </div>
-                <a className="text-dark-text font-bold text-xl bg-primary rounded-xl h-32 p-3" href='#contact'>
+                <a className="text-dark-text font-bold text-xl bg-primary rounded-xl h-32 p-3 iconGlow" href='#contact'>
                     Work with Me!
                 </a>
             </div>

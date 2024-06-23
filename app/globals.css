@@ -93,24 +93,3 @@ a[class*="active"] .navLine {
   box-shadow:
     0px 0px 0.75rem 2px #52FFC2;
 }
-
-.one {
-  grid-column: 3/5;
-  grid-row: 1/2;
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-
-.two {
-  grid-column: 3/5;
-  grid-row: 1/2;
-  grid-column-start: 5;
-  grid-row-start: 3;
-}
-
-.three {
-  grid-column: 3/5;
-  grid-row: 1/2;
-  grid-column-start: 1;
-  grid-row-start: 5;
-}
