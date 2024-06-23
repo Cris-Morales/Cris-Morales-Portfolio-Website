@@ -3,26 +3,29 @@ import Image from "next/image"
 export default function AboutMe() {
 
     return (
-        <section id='about' className=" h-fit scroll-mt-20">
-            <h3 className='text-primary text-3xl ml-10'>
-                About Me
-            </h3>
-            <article className="flex flex-col items-center">
-                <p className="text-white-text text-xl border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow">
-                    I began my professional journey as a Mechanical Engineer, where I first encountered programming through MatLab to analyze mathematical models and C++ for robotics and controls. A few years into my career, I felt a strong pull towards software-centric projects. This led me to dive into JavaScript and web development, ultimately securing a spot with the competitive tech accelerator OSLabs.
-                    <br /><br />
-                    Today, I am a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 15,000 downloads on DockerHub and 500 stars on GitHub.
-                    <br /><br />
-                    I am currently open to new opportunities!
-                    <span className='text-primary ml-1 textGlow'>
-                        <a href='#contact'>
-                            Let's create something awesome together :)
-                        </a>
-                    </span>
-                    <br /><br />
-                    When I'm not working, you can find me spending time with my wife, training in boxing, grappling, or mixed martial arts, caring for my animals, or gaming with friends.
-                </p>
-                <div className=" w-11/12 flex flex-col items-center">
+        <section id='about' className="h-section scroll-mt-15">
+            <article className="flex flex-col items-center lg:flex-row-reverse lg:justify-center border border-primary">
+                <div className="border border-primary lg:w-about-content">
+                    <h3 className='text-primary text-3xl ml-10'>
+                        About Me
+                    </h3>
+                    <p className="text-white-text text-xl border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow">
+                        I began my professional journey as a Mechanical Engineer, where I first encountered programming through MatLab to analyze mathematical models and C++ for robotics and controls. A few years into my career, I felt a strong pull towards software-centric projects. This led me to dive into JavaScript and web development, ultimately securing a spot with the competitive tech accelerator OSLabs.
+                        <br /><br />
+                        Today, I am a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 15,000 downloads on DockerHub and 500 stars on GitHub.
+                        <br /><br />
+                        I am currently open to new opportunities!
+                        <span className='text-primary ml-1 textGlow'>
+                            <a href='#contact'>
+                                Let's create something awesome together :)
+                            </a>
+                        </span>
+                        <br /><br />
+                        When I'm not working, you can find me spending time with my wife, training in boxing, grappling, or mixed martial arts, caring for my animals, or gaming with friends.
+                    </p>
+
+                </div>
+                <div className=" w-11/12 flex flex-col items-center border border-primary lg:w-3/5">
                     <Image
                         src="/aboutMe/meAndPartner.jpg"
                         alt="Me and my wife."

@@ -7,9 +7,9 @@ export default function Hero() {
 
 
     return (
-        <section id="hero" className="h-section flex flex-col items-center px-2">
+        <section id="hero" className="h-hero flex flex-col items-center justify-center p-hero md:flex-row">
             <Headshot />
-            <div className="w-full p-2">
+            <div className="w-full h-fit p-4 md:w-1/2 ">
                 <p className=" text-base text-light-text">
                     Hello! My name is
                 </p>

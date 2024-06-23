@@ -29,6 +29,7 @@ const config: Config = {
       heading: 'Nunito',
       body: 'Nunito',
     },
+
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -36,17 +37,16 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       height: {
-        "section": '100vh',
+        "hero": '105vh',
         "header": '8vh',
         'nav': '268px'
       },
       padding: {
-        "content": '6vh 0px 0px 0px',
-        "main": '0px 0px 0px 180px'
+        "main": '0px 0px 0px 180px',
+        'hero': '8vh 2rem 2rem 2rem'
       },
       margin: {
         "content": '0px 0px 0px 180px',
-        "nav": '-9vh 0px 0px 0px'
       },
       minWidth: {
         'headshot': '454px',
@@ -55,6 +55,9 @@ const config: Config = {
       maxWidth: {
         'carousel': '515px'
       },
+      width: {
+        'about-content': '75vh'
+      }
     },
   },
   plugins: [],

@@ -16,7 +16,6 @@ export default function Navbar() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    console.log(entry.target.id, entry.intersectionRatio)
                     setActive(entry.target.id);
                 }
             })
@@ -36,7 +35,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="hidden md:m-nav md:flex md:flex-col md:fixed md:h-screen md:justify-center">
+        <nav className="hidden xl:flex xl:flex-col xl:fixed xl:h-screen xl:justify-center z-10">
             <ul className="flex flex-col h-nav justify-between top-nav p-1">
                 <li>
                     <a className='text-primary bg-slate-700 flex items-center active' href='#home'>

@@ -10,9 +10,9 @@ import Navbar from "./ui/navbar/Navbar";
 export default function Page() {
 
   return (
-    <main className="p-content mt-4 md:flex">
+    <main className="p-content md:flex">
       <Navbar />
-      <div className="md:m-content">
+      <div className="md:flex md:flex-col md:items-center md:w-full">
         <Hero />
         <AboutMe />
         <Experience />
