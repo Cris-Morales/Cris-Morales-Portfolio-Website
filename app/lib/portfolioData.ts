@@ -81,7 +81,7 @@ export const projects: projectData[] = [
     {
         title: 'Rewatch Time',
         screenshot: '/projects/RewatchTime-Login.png',
-        description: 'Experimental App that randomly selects episodes of the show Adventure Time for you to watch and tracks which episodes you\'ve watched or favorited. Database data, schema, and instance was collected, architected, and launched by myself',
+        description: 'Experimental App that randomly selects episodes of the show Adventure Time for you to watch and tracks which episodes you\'ve watched or favorited. Database data, schema, and instance was collected, architected, and launched by myself.',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/Rewatch-Time.git',
         techstack: ['TypeScript', 'JavaScript', 'React', 'Node.JS', 'Express.JS', 'PostgreSQL']

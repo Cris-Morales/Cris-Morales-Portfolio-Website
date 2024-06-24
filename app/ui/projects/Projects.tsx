@@ -6,7 +6,7 @@ import Link from "next/link"
 export default function Projects() {
 
     return (
-        <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-16 mb-20">
+        <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-16 mb-5">
             <h3 className='text-primary text-3xl ml-10'>
                 Projects
             </h3>
@@ -28,7 +28,7 @@ export default function Projects() {
                                 {project.description}
                             </p>
                         </div>
-                        <div className="mt-2 mb-1">
+                        <div className="mt-2 flex justify-between items-end">
                             <div className="flex flex-wrap gap-1 text-sm opacity-85">
                                 {project.techstack.map((tech, techIndex) => {
                                     return (
@@ -38,26 +38,26 @@ export default function Projects() {
                                     )
                                 })}
                             </div>
-                        </div>
-                        <div className="flex gap-1 justify-end">
-                            {project.githubLink ?
-                                <a href={project.githubLink} className="">
-                                    <Image
-                                        src="/github.svg"
-                                        alt={`${project.title} - github link`}
-                                        width={24}
-                                        height={24}
-                                    />
-                                </a> : <div className=" w-6" />}
-                            {project.externalLink ?
-                                <a href={project.externalLink} className="">
-                                    <Image
-                                        src="/external.svg"
-                                        alt={`${project.title} - project external link`}
-                                        width={24}
-                                        height={24}
-                                    />
-                                </a> : <div className=" w-6" />}
+                            <div className="flex gap-1 justify-end">
+                                {project.githubLink &&
+                                    <a href={project.githubLink} className="">
+                                        <Image
+                                            src="/github.svg"
+                                            alt={`${project.title} - github link`}
+                                            width={30}
+                                            height={30}
+                                        />
+                                    </a>}
+                                {project.externalLink &&
+                                    <a href={project.externalLink} className="">
+                                        <Image
+                                            src="/external.svg"
+                                            alt={`${project.title} - project external link`}
+                                            width={30}
+                                            height={30}
+                                        />
+                                    </a>}
+                            </div>
                         </div>
                     </article>
                 )
