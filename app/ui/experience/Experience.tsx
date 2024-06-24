@@ -4,24 +4,26 @@ import { experienceData } from "@/app/lib/types"
 export default function Experience() {
 
     return (
-        <section id='experience' className="h-fit flex flex-col border border-primary">
+        <section id='experience' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-16 md:mb-20">
             <h3 className='text-primary text-3xl ml-10'>
                 Experience
             </h3>
-            {experience.map((experienceData: experienceData) => {
+            {experience.map((experienceData: experienceData, index) => {
                 return (
-                    <article className="text-white-text border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow">
-                        <h4>
+                    <article key={`${experienceData.title}-${experienceData.company}-${experienceData.timerange}`} className="text-white-text border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 md:w-3/5">
+                        <h4 className=" text-xl font-bold">
                             {experienceData.title}
                         </h4>
-                        <div>
-                            <h5>{experienceData.company}</h5>
-                            <h5>{experienceData.timerange}</h5>
+                        <div className="flex justify-between text-base font-normal">
+                            <h4>
+                                {experienceData.company}
+                            </h4>
+                            <h4>{experienceData.timerange}</h4>
                         </div>
-                        <ul className=" list-disc">
+                        <ul className=" list-disc text-base text-light-text opacity-80">
                             {experienceData.bullets.map((bullet: string) => {
                                 return (
-                                    <li>
+                                    <li key={bullet}>
                                         <p>
                                             {bullet}
                                         </p>
@@ -29,12 +31,11 @@ export default function Experience() {
                                 )
                             })}
                         </ul>
-                        {/* i wonder if adding this expanded section is too much for software positions. But part of me likes the idea of using this as a catch all website for me */}
                         {experienceData.expandedBullets &&
-                            <ul id='experienceData' className=" list-disc hidden">
+                            <ul id={`${experienceData.title}-${index}`} className="list-disc text-base text-light-text opacity-80 hidden">
                                 {experienceData.expandedBullets.map((bullet: string) => {
                                     return (
-                                        <li>
+                                        <li key={bullet}>
                                             <p>
                                                 {bullet}
                                             </p>

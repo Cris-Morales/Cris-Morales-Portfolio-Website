@@ -3,7 +3,7 @@ import { experienceData, projectData, talksPubsData } from "./types"
 
 export const experience: experienceData[] = [
     {
-        company: 'Docketeer',
+        company: 'Docketeer/OSLabs',
         title: 'Software Engineer',
         timerange: 'Sep 2024 - Current',
         bullets: [
@@ -11,20 +11,21 @@ export const experience: experienceData[] = [
             'Introduced a Dev- Browser mode by configuring Docker Compose YAML files and Node.js, circumventing Docker Desktop limitations by enabling hot module reloading, and saving 16 hours of development time per week',
             'Updated the Container Logs Tab using React by adding Date Picker components to give consumers an intuitive interface to filter by a date and time range to access running and stopped container logs',
             'Implemented a Search feature in the Container Logs Tab utilizing React with regular expressions, allowing consumers to search for Container Log messages and select specific rows to export to CSV',
+        ],
+        expandedBullets: [
             'Opted for Redux and Redux Toolkit for efficient state management and utilized Redux Thunk for asynchronous API requests, resulting in clearer state documentation and easier debugging with Redux DevTools',
             'Engineered Container and Kubernetes metric dashboards by configuring Grafana files for constructing dashboards and PromQL to scrape for relevant data, enabling consumers to analyze application performance',
             'Created a Configurations feature that uses a PostgreSQL instance to store user - defined exposed ports for Prometheus to scrape, allowing consumers more flexibility in defining Kubernetes and Container data collection'
-        ],
-        expandedBullets: null
+        ]
     },
     {
         company: 'Oilfield Equipment Marketing',
         title: 'Mechanical Engineer/Engineering Lead',
         timerange: 'Sep 2021 - Jul 2023',
         bullets: [
+            'Orchestrated the training, supervision, and leadership of a team of 8 engineers in company processes and engineering design principles',
             'Programmed a Proportional Integral Differential (PID) control script in C++, ensuring precise maintenance of a user-specified amperage, saving technicians approximately 8 hours in initial system setup time per week',
             'Developed VBA scripting to automate custom data collection and visualization, allowing technicians to perform more streamlined inspection services, resulting in over 95% consumer satisfaction',
-            'Orchestrated the training, supervision, and leadership of a team of 8 engineers in company processes and engineering design principles'
         ],
         expandedBullets: [
             'Redesigned the company\'s main product line, reducing overall volume by 40%, overall weight by 20%, manufacturing time by 30%, and modularizing the design while maintaining structural strength',
