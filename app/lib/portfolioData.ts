@@ -60,7 +60,7 @@ export const projects: projectData[] = [
         description: 'A user-friendly container management Docker Desktop extension with intuitive interfaces, and visualization tools for Docker containers and Kubernetes clusters.',
         externalLink: 'https://hub.docker.com/extensions/docketeerxiv/docketeer-extension',
         githubLink: 'https://github.com/open-source-labs/Docketeer-extension.git', // Could I have stars, forks, and Such here?
-        techstack: ['TypeScript', 'React', 'Redux', 'Node.JS', 'Express.JS', 'Docker'] //, 'PostgreSQL', 'Grafana', 'Prometheus' but it got a little crowded
+        techstack: ['TypeScript', 'React', 'Redux', 'Node.JS', 'Express.JS', 'Docker', 'PostgreSQL', 'Grafana', 'Prometheus']
     },
     {
         title: 'Docketeer.io',

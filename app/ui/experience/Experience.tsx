@@ -10,7 +10,7 @@ export default function Experience() {
             </h3>
             {experience.map((experienceData: experienceData, index) => {
                 return (
-                    <article key={`${experienceData.title}-${experienceData.company}-${experienceData.timerange}`} className="text-white-text border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 md:w-3/5">
+                    <article key={`${experienceData.title}-${experienceData.company}-${experienceData.timerange}`} className="text-white-text border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 xl:w-3/5">
                         <h4 className=" text-xl font-bold">
                             {experienceData.title}
                         </h4>

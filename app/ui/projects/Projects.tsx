@@ -12,11 +12,11 @@ export default function Projects() {
             </h3>
             {projects.map((project: projectData, index) => {
                 return (
-                    <article key={`${project.title}-${index}`} className="text-white-text border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 md:w-3/5">
+                    <article key={`${project.title}-${index}`} className="text-white-text border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 xl:w-1/2">
                         <h4 className=" text-xl font-bold">
                             {project.title}
                         </h4>
-                        <div className="flex items-center gap-10">
+                        <div className="flex gap-10 my-5">
                             {project.screenshot && <Image
                                 src={project.screenshot}
                                 alt={project.title}
@@ -24,7 +24,7 @@ export default function Projects() {
                                 height={125}
                                 className=" w-52 h-auto rounded-xl border border-accent"
                             />}
-                            <p className="text-base text-light-text opacity-85">
+                            <p className="text-base text-light-text opacity-85 w-3/5">
                                 {project.description}
                             </p>
                         </div>
@@ -40,7 +40,7 @@ export default function Projects() {
                             </div>
                             <div className="flex gap-1 justify-end">
                                 {project.githubLink &&
-                                    <a href={project.githubLink} className="">
+                                    <a href={project.githubLink} className="iconGlow">
                                         <Image
                                             src="/github.svg"
                                             alt={`${project.title} - github link`}
@@ -49,7 +49,7 @@ export default function Projects() {
                                         />
                                     </a>}
                                 {project.externalLink &&
-                                    <a href={project.externalLink} className="">
+                                    <a href={project.externalLink} className="iconGlow">
                                         <Image
                                             src="/external.svg"
                                             alt={`${project.title} - project external link`}
