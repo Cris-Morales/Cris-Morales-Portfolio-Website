@@ -60,7 +60,7 @@ export const projects: projectData[] = [
         description: 'A user-friendly container management Docker Desktop extension with intuitive interfaces, and visualization tools for Docker containers and Kubernetes clusters.',
         externalLink: 'https://hub.docker.com/extensions/docketeerxiv/docketeer-extension',
         githubLink: 'https://github.com/open-source-labs/Docketeer-extension.git', // Could I have stars, forks, and Such here?
-        techstack: ['TypeScript', 'JavaScript', 'React', 'Redux', 'Node.JS', 'Express.JS', 'Jest', 'Docker', 'PostgreSQL', 'Grafana', 'Prometheus']
+        techstack: ['TypeScript', 'React', 'Redux', 'Node.JS', 'Express.JS', 'Docker'] //, 'PostgreSQL', 'Grafana', 'Prometheus' but it got a little crowded
     },
     {
         title: 'Docketeer.io',
@@ -81,7 +81,7 @@ export const projects: projectData[] = [
     {
         title: 'Rewatch Time',
         screenshot: '/projects/RewatchTime-Login.png',
-        description: 'Experimental App that randomly selects episodes of the show Adventure Time for you to watch and tracks which episodes you\'ve watched or favorited. This uses TypeScript, React, Node.JS, Express.JS, with a PostgreSQL instance launched on AWS. Database data, schema, and instance was collected, architected, and launched by yours truly.',
+        description: 'Experimental App that randomly selects episodes of the show Adventure Time for you to watch and tracks which episodes you\'ve watched or favorited. Database data, schema, and instance was collected, architected, and launched by myself',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/Rewatch-Time.git',
         techstack: ['TypeScript', 'JavaScript', 'React', 'Node.JS', 'Express.JS', 'PostgreSQL']
@@ -99,13 +99,13 @@ export const projects: projectData[] = [
 export const talksPubs: talksPubsData[] = [
     {
         title: 'Navigating the Seas of Docker with Docketeer v15.0',
-        screenshot: '/projects/talksAndPubs/Docketeer15-Article-Icon.png',
+        thumbnail: '/projects/talksAndPubs/Docketeer15-Article-Icon.png',
         externalLink: 'https://medium.com/@christiandoescoding/navigating-the-seas-of-docker-with-docketeer-v15-0-ad5bd9540d14',
         tag: 'Medium'
     },
     {
         title: 'The Internet of Things',
-        screenshot: '/projects/talksAndPubs/TechTalk.png',
+        thumbnail: '/projects/talksAndPubs/TechTalk.png',
         externalLink: 'https://www.linkedin.com/in/cris-morales/',
         tag: 'Tech Talk'
     }

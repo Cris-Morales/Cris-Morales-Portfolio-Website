@@ -19,8 +19,8 @@ export interface projectData {
 
 export interface talksPubsData {
     title: string;
-    screenshot: string | null;
-    externalLink: string | null;
+    thumbnail: string | null;
+    externalLink: string;
     tag: string;
 }
 
