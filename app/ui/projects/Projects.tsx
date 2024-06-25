@@ -6,8 +6,8 @@ import Link from "next/link"
 export default function Projects() {
 
     return (
-        <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-16 mb-5">
-            <h3 className='text-primary text-3xl ml-10'>
+        <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-20 mt-10">
+            <h3 className='text-primary text-3xl'>
                 Projects
             </h3>
             {projects.map((project: projectData, index) => {
@@ -44,17 +44,20 @@ export default function Projects() {
                                         <Image
                                             src="/github.svg"
                                             alt={`${project.title} - github link`}
-                                            width={30}
-                                            height={30}
+                                            width={32}
+                                            height={32}
+                                            className=" min-w-8"
+
                                         />
                                     </a>}
                                 {project.externalLink &&
                                     <a href={project.externalLink} className="iconGlow">
                                         <Image
-                                            src="/external.svg"
+                                            src="/externalLight.svg"
                                             alt={`${project.title} - project external link`}
-                                            width={30}
-                                            height={30}
+                                            width={32}
+                                            height={32}
+                                            className=" min-w-8"
                                         />
                                     </a>}
                             </div>

@@ -5,26 +5,38 @@ import { talksPubsData } from "@/app/lib/types"
 export default function TalksAndPubs() {
 
     return (
-        <section id='talks' className="flex flex-col items-center md:scroll-m-16 md:mb-20">
-            <h3 className='text-primary text-xl ml-10'>
+        <section id='talks' className="flex flex-col items-center mb-20 w-full">
+            <h3 className='text-primary text-xl mt-5 mb-10'>
                 Talks and Publications
             </h3>
-            {talksPubs.map((card: talksPubsData) => {
-                return (
-                    <div key={card.title}>
-                        <a href={card.externalLink}>
-                            {card.thumbnail &&
-                                <Image
-                                    src={card.thumbnail}
-                                    alt={`{card.title} - image`}
-                                    width={335}
-                                    height={225}
-                                />}
-                            <h5>{card.title}</h5>
-                        </a>
-                    </div>
-                );
-            })}
+            <div className="flex flex-col w-3/5 xl:w-1/3 gap-10">
+                {talksPubs.map((card: talksPubsData) => {
+                    return (
+                        <article key={card.title} className="grid content-center bg-background bg-opacity-35 boxGlow rounded-xl p-2">
+                            <a href={card.externalLink} className="flex flex-col items-center text-center p-5 opacity-75 hover:opacity-100 transition-all gap-5">
+                                {card.thumbnail &&
+                                    <div className="rounded-xl flex flex-col items-end">
+                                        <Image
+                                            src={card.thumbnail}
+                                            alt={`{card.title} - thumbnail`}
+                                            width={335}
+                                            height={225}
+                                            className=" rounded-xl relative z-10"
+                                        />
+                                        <Image
+                                            src="/externalDark.svg"
+                                            alt={`${card.title}-publication-external-link`}
+                                            width={20}
+                                            height={20}
+                                            className="-mt-6 z-10 mr-2 "
+                                        />
+                                    </div>}
+                                <h5 className="md:w-4/5">"{card.title}"</h5>
+                            </a>
+                        </article>
+                    );
+                })}
+            </div>
         </section>
     )
 }
