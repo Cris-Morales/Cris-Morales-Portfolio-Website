@@ -12,7 +12,7 @@ export default function TalksAndPubs() {
             <div className="flex flex-col w-3/5 xl:w-1/3 gap-10">
                 {talksPubs.map((card: talksPubsData) => {
                     return (
-                        <article key={card.title} className="grid content-center bg-background bg-opacity-35 boxGlow rounded-xl p-2">
+                        <article key={card.title} className="border-2 border-primary grid content-center bg-background bg-opacity-35 boxGlow rounded-xl p-2">
                             <a href={card.externalLink} className="flex flex-col items-center text-center p-5 opacity-75 hover:opacity-100 transition-all gap-5">
                                 {card.thumbnail &&
                                     <div className="rounded-xl flex flex-col items-end">
