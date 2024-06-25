@@ -6,6 +6,7 @@ import Projects from "./ui/projects/Projects";
 import TalksAndPubs from "./ui/projects/talksAndPubs/TalksAndPubs";
 import Contact from "./ui/contact/Contact";
 import Navbar from "./ui/navbar/Navbar";
+import Footer from "./ui/Footer";
 
 export default function Page() {
 
@@ -19,6 +20,7 @@ export default function Page() {
         <Projects />
         <TalksAndPubs />
         <Contact />
+        <Footer />
       </div>
     </main>
   );
