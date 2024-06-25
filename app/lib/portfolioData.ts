@@ -106,7 +106,7 @@ export const talksPubs: talksPubsData[] = [
     {
         title: 'The Internet of Things',
         thumbnail: '/projects/talksAndPubs/TechTalk.png',
-        externalLink: 'https://www.linkedin.com/in/cris-morales/',
+        externalLink: 'https://www.linkedin.com/posts/cris-morales_please-enjoy-my-tech-talk-on-the-internet-activity-7125179730277928960-NAVR?utm_source=share&utm_medium=member_desktop',
         tag: 'Tech Talk'
     }
 ]
