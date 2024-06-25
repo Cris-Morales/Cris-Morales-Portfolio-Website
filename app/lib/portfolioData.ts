@@ -19,7 +19,7 @@ export const experience: experienceData[] = [
         ]
     },
     {
-        company: 'Oilfield Equipment Marketing',
+        company: 'Oilfield Equipment Marketing Inc.',
         title: 'Mechanical Engineer/Engineering Lead',
         timerange: 'Sep 2021 - Jul 2023',
         bullets: [
@@ -40,7 +40,7 @@ export const experience: experienceData[] = [
         ]
     },
     {
-        company: 'Knight Aerospace',
+        company: 'Knight Aerospace LLC',
         title: 'Mechanical Design Engineer',
         timerange: 'Dec 2018 - Mar 2020',
         bullets: [
@@ -84,7 +84,7 @@ export const projects: projectData[] = [
         description: 'Experimental App that randomly selects episodes of the show Adventure Time for you to watch and tracks which episodes you\'ve watched or favorited. Database data, schema, and instance was collected, architected, and launched by myself.',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/Rewatch-Time.git',
-        techstack: ['TypeScript', 'JavaScript', 'React', 'Node.JS', 'Express.JS', 'PostgreSQL']
+        techstack: ['TypeScript', 'JavaScript', 'React', 'Node.JS', 'Express.JS', 'PostgreSQL', 'JWT', 'React Query']
     },
     {
         title: 'GetSwell',

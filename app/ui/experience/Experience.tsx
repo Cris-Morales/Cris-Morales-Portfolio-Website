@@ -10,15 +10,15 @@ export default function Experience() {
             </h3>
             {experience.map((experienceData: experienceData, index) => {
                 return (
-                    <article key={`${experienceData.title}-${experienceData.company}-${experienceData.timerange}`} className="text-white-text border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 xl:w-3/5">
+                    <article key={`${experienceData.title}-${experienceData.company}-${experienceData.timerange}`} className="text-white-text border-2 border-primary rounded-3xl px-7 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 xl:w-3/5">
                         <h4 className=" text-xl font-bold">
                             {experienceData.title}
                         </h4>
-                        <div className="flex justify-between text-base font-normal">
+                        <div className="flex justify-between text-base font-bold gap-4">
                             <h4>
                                 {experienceData.company}
                             </h4>
-                            <h4>{experienceData.timerange}</h4>
+                            <h4 className="">{experienceData.timerange}</h4>
                         </div>
                         <ul className=" list-disc text-base text-light-text opacity-80">
                             {experienceData.bullets.map((bullet: string) => {

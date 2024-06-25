@@ -1,7 +1,6 @@
-import { projects, techstackIcons } from "@/app/lib/portfolioData"
+import { projects } from "@/app/lib/portfolioData"
 import { projectData } from "@/app/lib/types"
 import Image from "next/image"
-import Link from "next/link"
 
 export default function Projects() {
 
@@ -12,7 +11,7 @@ export default function Projects() {
             </h3>
             {projects.map((project: projectData, index) => {
                 return (
-                    <article key={`${project.title}-${index}`} className="text-white-text border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 xl:w-1/2">
+                    <article key={`${project.title}-${index}`} className="text-white-text border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 xl:w-1/2">
                         <h4 className=" text-xl font-bold">
                             {project.title}
                         </h4>
@@ -24,7 +23,7 @@ export default function Projects() {
                                 height={125}
                                 className=" w-52 h-auto rounded-xl border border-accent"
                             />}
-                            <p className="text-base text-light-text opacity-85 w-3/5">
+                            <p className="text-base text-light-text opacity-75 w-3/5">
                                 {project.description}
                             </p>
                         </div>

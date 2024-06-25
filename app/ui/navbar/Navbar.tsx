@@ -73,7 +73,7 @@ export default function Navbar() {
                     <a href='#contact' className='text-primary bg-slate-700 flex items-center'>
                         <div className="navLine" />
                         <span className="">
-                            Message Me
+                            Contact Me
                         </span>
                     </a>
                 </li>
