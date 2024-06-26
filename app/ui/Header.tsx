@@ -7,17 +7,17 @@ export default function Header() {
         <header className=" z-50 flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 bg-background">
             <ul className="flex gap-3 items-center">
                 <li>
-                    <Link href='https://github.com/Cris-Morales' className="iconGlow">
+                    <a href='https://github.com/Cris-Morales' className="iconGlow">
                         <Image
                             src="/github.svg"
                             alt="Cristian's Github Profile Link"
                             width={40}
                             height={40}
                         />
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href='https://www.linkedin.com/in/Cris-Morales'
+                    <a href='https://www.linkedin.com/in/Cris-Morales'
                         className="iconGlow">
                         <Image
                             src="/linkedIn.svg"
@@ -25,10 +25,10 @@ export default function Header() {
                             width={40}
                             height={34}
                         />
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href='mailto:CrisMorales@protonmail.com'
+                    <a href='mailto:CrisMorales@protonmail.com'
                         className="iconGlow">
                         <Image
                             src="/email.svg"
@@ -36,7 +36,7 @@ export default function Header() {
                             width={37}
                             height={34}
                         />
-                    </Link>
+                    </a>
                 </li>
             </ul>
             <div className=" grid content-center text-center textGlow">

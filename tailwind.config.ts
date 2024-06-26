@@ -42,8 +42,12 @@ const config: Config = {
         'nav': '268px',
         'section': '100vh',
         'section2': '1080px',
-        'footer': '12vh',
-        'contact': '85vh'
+        'footer': '15vh',
+        'contact': '75vh'
+      },
+      minHeight: {
+        'footer': '21vh',
+        'contact': '70vh'
       },
       padding: {
         "main": '0px 0px 0px 180px',
