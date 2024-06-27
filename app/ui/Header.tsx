@@ -30,7 +30,7 @@ export default function Header() {
                 </li>
                 <li>
                     <a href='mailto:CrisMorales@protonmail.com'
-                        className="iconGlow">
+                        className="iconGlowXl">
                         <Image
                             src="/email.svg"
                             alt="Cristian's Buisness Email"

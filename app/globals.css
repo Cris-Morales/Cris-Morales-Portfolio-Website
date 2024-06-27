@@ -7,6 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --nav-transition-duration: 300ms;
+  --app-transition-duration: 200ms;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,7 +70,7 @@ a[class*="active"] .navLine {
 }
 
 .textGlow {
-  transition: 300ms;
+  transition: var(--app-transition-duration);
 }
 
 .textGlow:hover {
@@ -77,16 +78,26 @@ a[class*="active"] .navLine {
     0 0 1rem #52FFC2,
     0 0 1.75rem #52FFC2,
     0 0 2.0rem #52FFC2;
-  transition: 300ms;
+  transition: var(--app-transition-duration);
+}
+
+
+.iconGlow {
+  transition: var(--app-transition-duration);
 }
 
 .iconGlow:hover {
   filter: drop-shadow(0 0 0.8rem #52FFC2) drop-shadow(0 0 0.5rem #52ffc27a);
-  transition: 300ms;
+  transition: var(--app-transition-duration);
 }
 
-.iconGlow {
-  transition: 300ms;
+.iconGlowXl {
+  transition: var(--app-transition-duration);
+}
+
+.iconGlowXl:hover {
+  filter: drop-shadow(0 0 0.8rem #52FFC2) drop-shadow(0 0 0.5rem #52ffc27a) drop-shadow(0 0 0.5rem #52ffc27a);
+  transition: var(--app-transition-duration);
 }
 
 .boxGlow {

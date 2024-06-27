@@ -50,7 +50,7 @@ export default function Projects() {
                                         />
                                     </a>}
                                 {project.externalLink &&
-                                    <a href={project.externalLink} className="iconGlow">
+                                    <a href={project.externalLink} className="iconGlowXl">
                                         <Image
                                             src="/externalLight.svg"
                                             alt={`${project.title} - project external link`}
