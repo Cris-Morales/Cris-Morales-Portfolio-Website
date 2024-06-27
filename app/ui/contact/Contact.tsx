@@ -15,19 +15,19 @@ export default function Contact() {
                 <label className="mb-2 text-base">
                     Name
                 </label>
-                <input className="rounded-md bg-background bg-opacity-75 border-2 border-primary py-1 px-2 mb-2 w-3/4" />
+                <input className="rounded-md bg-background bg-opacity-35 border-2 border-primary py-1 px-2 mb-2 w-3/4" />
                 <label className="mb-2 text-base">
                     Email
                 </label>
-                <input type='email' className="rounded-md bg-background bg-opacity-75 border-2 border-primary py-1 px-2 mb-4 w-3/4" />
+                <input type='email' className="rounded-md bg-background bg-opacity-35 border-2 border-primary py-1 px-2 mb-4 w-3/4" />
                 <label className="mb-2 text-base">
                     Subject
                 </label>
-                <input className="rounded-md bg-background bg-opacity-75 border-2 border-primary py-1 px-2 mb-4 w-3/4" />
+                <input className="rounded-md bg-background bg-opacity-35 border-2 border-primary py-1 px-2 mb-4 w-3/4" />
                 <label className="mb-2 text-base">
                     Message
                 </label>
-                <textarea className="rounded-md bg-background bg-opacity-75 border-2 border-primary py-2 px-4 mb-4 text-wrap w-3/4 max-h-fit min-h-40" />
+                <textarea className="rounded-md bg-background bg-opacity-35 border-2 border-primary py-2 px-2 mb-4 text-wrap w-3/4 max-h-fit min-h-40" />
                 <button className=" text-background text-xl font-bold iconGlow bg-primary w-3/4 rounded-xl my-2">Submit</button>
             </form>
         </section>
