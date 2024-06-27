@@ -7,7 +7,7 @@ export default function Hero() {
 
 
     return (
-        <section id="hero" className="h-fit flex flex-col items-center justify-center p-hero md:flex-row md:h-hero md:mb-20">
+        <section id="hero" className="h-fit flex flex-col items-center justify-center p-hero md:flex-row md:h-hero md:mb-20 gap-10">
             <Headshot />
             <div className="w-full h-fit p-4 md:w-1/2 ">
                 <p className=" text-base text-light-text">
