@@ -1,10 +1,10 @@
 import Headshot from "./Headshot"
 import { techstackIcons } from "@/app/lib/portfolioData"
 import Image from "next/image"
+import TechstackCarousel from "./TechstackCarousel"
 
 export default function Hero() {
     const myTitles: string[] = ['Software', 'Mechanical', 'Fullstack', 'Robotics']
-
 
     return (
         <section id="hero" className="h-fit flex flex-col items-center justify-center p-hero md:flex-row md:h-hero md:mb-20 gap-10">
@@ -20,7 +20,7 @@ export default function Hero() {
                     <span>Software
                     </span> Engineer
                 </h2>
-                <div className=' max-w-carousel min-w-carousel flex justify-between gap-6 overflow-hidden my-6 h-14'>
+                {/* <div className=' max-w-carousel min-w-carousel flex justify-between gap-6 overflow-hidden my-6 h-14'>
                     {techstackIcons.map((icon: string) => {
                         return (
                             <Image
@@ -32,6 +32,9 @@ export default function Hero() {
                             />
                         )
                     })}
+                </div> */}
+                <div className="carousel">
+                    <TechstackCarousel />
                 </div>
                 <a className="text-dark-text font-bold text-xl bg-primary rounded-xl h-32 p-3 iconGlow" href='#contact'>
                     Work with Me!

@@ -8,6 +8,7 @@
   --background-end-rgb: 255, 255, 255;
   --nav-transition-duration: 300ms;
   --app-transition-duration: 200ms;
+  --carousel-fade-length: 5%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,7 +41,6 @@ nav a[class*="active"] {
     0px 0px 2.0rem #52FFC2;
 }
 
-/* ngl I kind of don't like the hover effect just being the active effect. The presentation is a tad weird. I want to try the glow effect instead.*/
 nav a:hover {
   transition-duration: var(--nav-transition-duration);
   font-weight: bold;
@@ -121,4 +121,21 @@ a[class*="active"] .navLine {
 
 .heroImageGlow {
   filter: drop-shadow(0 0 0.5rem #FFFFFF);
+}
+
+.carousel {
+  -webkit-mask: linear-gradient(90deg,
+      transparent,
+      white 5%,
+      white 95%,
+      transparent);
+  mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+}
+
+.content {
+  -webkit-mask: linear-gradient(transparent,
+      white 5%,
+      white 95%,
+      transparent);
+  mask: linear-gradient(transparent, white 5%, white 95%, transparent);
 }
