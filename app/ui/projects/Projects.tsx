@@ -16,13 +16,17 @@ export default function Projects() {
                             {project.title}
                         </h4>
                         <div className="flex gap-10 my-5">
-                            {project.screenshot && <Image
-                                src={project.screenshot}
-                                alt={project.title}
-                                width={200}
-                                height={125}
-                                className=" w-52 h-auto rounded-xl border border-accent"
-                            />}
+                            {project.screenshot &&
+                                <div className=" w-52 h-auto rounded-xl self-center">
+                                    <Image
+                                        src={project.screenshot}
+                                        alt={project.title}
+                                        width={200}
+                                        height={125}
+                                        className="rounded-xl border border-accent"
+                                    />
+                                </div>
+                            }
                             <p className="text-base text-light-text opacity-75 w-3/5">
                                 {project.description}
                             </p>
