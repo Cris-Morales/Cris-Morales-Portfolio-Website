@@ -3,9 +3,9 @@ import Image from "next/image"
 export default function AboutMe() {
 
     return (
-        <section id='about' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-20 mb-20 mt-10">
-            <article className="flex flex-col items-center justify-start lg:flex-row-reverse lg:items-start w-full 2xl:w-2/3 border border-primary ">
-                <div className="lg:w-about-content border border-primary">
+        <section id='about' className="max-h-fit min-h-screen flex flex-col items-center justify-center md:scroll-m-14 mb-20 mt-10 w-full">
+            <article className="flex flex-col items-center justify-center lg:flex-row-reverse lg:items-start w-full 2xl:w-2/3 p-2 -mt-10">
+                <div className="lg:w-about-content">
                     <h3 className='text-primary text-3xl ml-10'>
                         About Me
                     </h3>
@@ -25,8 +25,8 @@ export default function AboutMe() {
                     </p>
 
                 </div>
-                <div className="flex flex-col items-center lg:w-3/5 lg:mr-5 xl:ml-24 border border-primary">
-                    <div className="w-1/2 sm:w-1/3 relative right-20 top-5 z-20">
+                <div className="flex flex-col items-center lg:w-1/2 lg:mr-5 self-center pt-10">
+                    <div className="w-2/5 md:w-1/3  lg:w-5/12 xl:w-1/3 2xl:w-5/12 relative aboutRight top-8 sm:top-14 z-20 ">
                         <Image
                             src="/aboutMe/meAndPartner.jpg"
                             alt="Me and my wife."
@@ -35,7 +35,7 @@ export default function AboutMe() {
                             className="rounded-3xl aboutImageGlow"
                         />
                     </div >
-                    <div className="w-1/2 sm:w-1/3 relative left-20 z-10">
+                    <div className="w-2/5 md:w-1/3 lg:w-5/12 xl:w-1/3 2xl:w-5/12 relative aboutLeft z-10">
                         <Image
                             src="/aboutMe/meAndDoggo.jpg"
                             alt="Me and our family Chonk, I mean, Dog in a tortilla blanket."
@@ -44,7 +44,7 @@ export default function AboutMe() {
                             className="rounded-3xl aboutImageGlow "
                         />
                     </div>
-                    <div className="w-1/2 sm:w-1/3 relative right-20 bottom-5">
+                    <div className="w-2/5 md:w-1/3 lg:w-5/12 xl:w-1/3 2xl:w-5/12 relative aboutRight bottom-14 sm:bottom-24 lg:bottom-14 xl:bottom-24">
                         <Image
                             src="/aboutMe/jiuJitsuTournament.jpg"
                             alt="Me, at my 3rd Grappling Tournament at Blue Belt, getting bronze because I was late to my match against the silver metal winner."
@@ -52,6 +52,7 @@ export default function AboutMe() {
                             height={995}
                             className="rounded-3xl aboutImageGlow"
                         />
+                        {/* <sm: good, sm: good md: good lg-xl after xl-lg looks terrible, then good, then before small looks terrrible again */}
                     </div>
                 </div>
             </article>
