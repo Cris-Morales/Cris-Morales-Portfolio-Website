@@ -67,7 +67,7 @@ const config: Config = {
         'carousel': '515px'
       },
       width: {
-        'about-content': '850px'
+        'about-content': '850px',
       }
     },
   },

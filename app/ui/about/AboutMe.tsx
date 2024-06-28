@@ -29,22 +29,22 @@ export default function AboutMe() {
                     <Image
                         src="/aboutMe/meAndPartner.jpg"
                         alt="Me and my wife."
-                        width={300}
-                        height={338}
+                        width={1331}
+                        height={1536}
                         className="rounded-3xl relative right-32 top-20 z-20 min-w-60 max-w-72 aboutImageGlow"
                     />
                     <Image
                         src="/aboutMe/meAndDoggo.jpg"
                         alt="Me and our family Chonk, I mean, Dog in a tortilla blanket."
-                        width={300}
-                        height={305}
+                        width={793}
+                        height={887}
                         className="rounded-3xl relative left-32 z-10  min-w-60 max-w-72 aboutImageGlow"
                     />
                     <Image
                         src="/aboutMe/jiuJitsuTournament.jpg"
                         alt="Me, at my 3rd Grappling Tournament at Blue Belt, getting bronze because I was late to my match against the silver metal winner."
-                        width={300}
-                        height={306}
+                        width={1022}
+                        height={995}
                         className="rounded-3xl relative right-32 bottom-20  min-w-60 max-w-72 aboutImageGlow"
                     />
                 </div>

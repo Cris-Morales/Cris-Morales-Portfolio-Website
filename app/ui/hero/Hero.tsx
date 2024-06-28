@@ -20,19 +20,6 @@ export default function Hero() {
                     <span>Software
                     </span> Engineer
                 </h2>
-                {/* <div className=' max-w-carousel min-w-carousel flex justify-between gap-6 overflow-hidden my-6 h-14'>
-                    {techstackIcons.map((icon: string) => {
-                        return (
-                            <Image
-                                src={icon}
-                                alt={icon.slice(16, 26)}
-                                width={50}
-                                height={50}
-                                key={icon}
-                            />
-                        )
-                    })}
-                </div> */}
                 <div className="carousel">
                     <TechstackCarousel />
                 </div>

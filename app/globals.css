@@ -131,3 +131,9 @@ a[class*="active"] .navLine {
       transparent);
   mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
 }
+
+.aboutMe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+}
