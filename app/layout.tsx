@@ -22,7 +22,7 @@ export default function RootLayout({
           <Header />
           {children}
         </div>
-        <div className=" fixed bottom-0 w-screen h-screen bg-background-glow z-10" />
+        <div className="z-10 fixed bottom-0 w-screen h-screen 2xl:bg-background-glow " />
       </body>
     </html>
   );
