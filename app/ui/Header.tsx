@@ -4,8 +4,8 @@ import Link from "next/link"
 export default function Header() {
 
     return (
-        <header className=" z-50 flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 ">
-            {/* bg-background */}
+        <header className="z-50 flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 bg-header-background-glow bg-opacity-50 2xl:bg-none headerShadow">
+            {/* bg-background bg-opacity-50 bg-blend-normal backdrop-blur-lg */}
             <ul className="flex gap-3 items-center">
                 <li>
                     <a href='https://github.com/Cris-Morales' className="iconGlow">
