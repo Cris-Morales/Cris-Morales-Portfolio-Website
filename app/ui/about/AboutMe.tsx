@@ -3,13 +3,13 @@ import Image from "next/image"
 export default function AboutMe() {
 
     return (
-        <section id='about' className=" max-h-fit min-h-screen xl:scroll-mt-14 xl:mb-20 mt-10">
-            <article className="flex flex-col items-center justify-center xl:flex-row-reverse ">
-                <div className="xl:w-about-content">
+        <section id='about' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-20 mb-20 mt-10">
+            <article className="flex flex-col items-center justify-start lg:flex-row-reverse lg:items-start w-full 2xl:w-2/3 border border-primary ">
+                <div className="lg:w-about-content border border-primary">
                     <h3 className='text-primary text-3xl ml-10'>
                         About Me
                     </h3>
-                    <p className="text-white-text text-xl border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow">
+                    <p className="text-white-text text-xl border-2 border-primary rounded-3xl pl-7 pr-5 py-5 m-5 bg-background bg-opacity-35 boxGlow ">
                         I began my professional journey as a Mechanical Engineer, where I first encountered programming through MatLab to analyze mathematical models and C++ for robotics and controls. A few years into my career, I felt a strong pull towards software-centric projects. This led me to dive into JavaScript and web development, ultimately securing a spot with the competitive tech accelerator OSLabs.
                         <br /><br />
                         Today, I am a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 50,000 downloads on DockerHub and 850 stars on GitHub.
@@ -25,28 +25,34 @@ export default function AboutMe() {
                     </p>
 
                 </div>
-                <div className="flex flex-col items-center xl:w-3/5 xl:mr-5 xl:ml-24">
-                    <Image
-                        src="/aboutMe/meAndPartner.jpg"
-                        alt="Me and my wife."
-                        width={1331}
-                        height={1536}
-                        className="rounded-3xl relative right-32 top-20 z-20 min-w-60 max-w-72 aboutImageGlow"
-                    />
-                    <Image
-                        src="/aboutMe/meAndDoggo.jpg"
-                        alt="Me and our family Chonk, I mean, Dog in a tortilla blanket."
-                        width={793}
-                        height={887}
-                        className="rounded-3xl relative left-32 z-10  min-w-60 max-w-72 aboutImageGlow"
-                    />
-                    <Image
-                        src="/aboutMe/jiuJitsuTournament.jpg"
-                        alt="Me, at my 3rd Grappling Tournament at Blue Belt, getting bronze because I was late to my match against the silver metal winner."
-                        width={1022}
-                        height={995}
-                        className="rounded-3xl relative right-32 bottom-20  min-w-60 max-w-72 aboutImageGlow"
-                    />
+                <div className="flex flex-col items-center lg:w-3/5 lg:mr-5 xl:ml-24 border border-primary">
+                    <div className="w-1/2 sm:w-1/3 relative right-20 top-5 z-20">
+                        <Image
+                            src="/aboutMe/meAndPartner.jpg"
+                            alt="Me and my wife."
+                            width={1331}
+                            height={1536}
+                            className="rounded-3xl aboutImageGlow"
+                        />
+                    </div >
+                    <div className="w-1/2 sm:w-1/3 relative left-20 z-10">
+                        <Image
+                            src="/aboutMe/meAndDoggo.jpg"
+                            alt="Me and our family Chonk, I mean, Dog in a tortilla blanket."
+                            width={793}
+                            height={887}
+                            className="rounded-3xl aboutImageGlow "
+                        />
+                    </div>
+                    <div className="w-1/2 sm:w-1/3 relative right-20 bottom-5">
+                        <Image
+                            src="/aboutMe/jiuJitsuTournament.jpg"
+                            alt="Me, at my 3rd Grappling Tournament at Blue Belt, getting bronze because I was late to my match against the silver metal winner."
+                            width={1022}
+                            height={995}
+                            className="rounded-3xl aboutImageGlow"
+                        />
+                    </div>
                 </div>
             </article>
         </section>
