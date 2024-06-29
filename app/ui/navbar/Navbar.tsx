@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { debounce } from 'lodash';
 
 const navDict: any = {
     'hero': '#home',
@@ -12,19 +13,51 @@ const navDict: any = {
 export default function Navbar() {
     const [active, setActive] = useState('hero');
 
+    // useEffect(() => {
+    //     // const observer = new IntersectionObserver((entries) => {
+    //     //     entries.forEach((entry) => {
+    //     //         if (entry.isIntersecting) {
+    //     //             setActive(entry.target.id);
+    //     //         }
+    //     //     })
+    //     // });
+    //     // const sections = document.querySelectorAll('section');
+    //     // sections.forEach((el) => observer.observe(el));
+    //     addEventListener("scroll", () => {
+    //         const sections = document.querySelectorAll('section');
+    //         const viewportHeight: number = window.innerHeight;
+
+    //         sections.forEach((section) => {
+    //             const rect: DOMRect = section.getBoundingClientRect();
+    //             if (rect.top < viewportHeight && rect.bottom >= (viewportHeight / 2)) {
+    //                 setActive(section.id);
+    //             }
+    //         })
+    //     })
+
+    // }, []);
+
+
+
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setActive(entry.target.id);
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('section');
+            const viewportHeight = window.innerHeight;
+
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < viewportHeight && rect.bottom >= (viewportHeight / 2)) {
+                    console.log('render')
+                    setActive((prevActive) => (prevActive !== section.id ? section.id : prevActive));
                 }
-            })
-        });
-        const sections = document.querySelectorAll('section');
-        sections.forEach((el) => observer.observe(el));
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-
+    // what sets the nav link class, activates when the active State changes, and rerenders the nav links
     useEffect(() => {
         const navLinks = document.querySelectorAll(`nav ul li a`);
         const activeLink = document.querySelector(`a[href="${navDict[active]}"]`);
