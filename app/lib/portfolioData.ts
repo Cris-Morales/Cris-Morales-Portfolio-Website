@@ -128,6 +128,6 @@ export const techstackIcons: string[] = [
     '/techstackIcons/vite.svg',
     '/techstackIcons/figma.svg',
     '/techstackIcons/mongo.svg',
-    '/techstackIcons/vb.svg',
     '/techstackIcons/js.svg',
+    '/techstackIcons/vb.svg',
 ]
