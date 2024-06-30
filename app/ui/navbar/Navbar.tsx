@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState, useCallback } from "react";
-import Document from "next/document";
 interface NavDict {
     [key: string]: string;
 }
@@ -25,7 +24,7 @@ export default function Navbar() {
             const sections = document.querySelectorAll<HTMLElement>('section');
             const viewportHeight = window.innerHeight;
 
-            sections.forEach((section) => {
+            sections.forEach((section: HTMLElement) => {
                 const rect = section.getBoundingClientRect();
                 if (rect.top < viewportHeight && rect.bottom >= viewportHeight / 2) {
                     setActive((prevActive) => (prevActive !== section.id ? section.id : prevActive));
