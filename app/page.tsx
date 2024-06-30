@@ -1,4 +1,3 @@
-'use client'
 import Hero from "./ui/hero/Hero";
 import AboutMe from "./ui/about/AboutMe";
 import Experience from "./ui/experience/Experience";

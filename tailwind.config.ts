@@ -68,6 +68,8 @@ const config: Config = {
       },
       width: {
         'about-content': '625px',
+        'headshot': '454px',
+
       },
       left: {
         'about-left': '50px',

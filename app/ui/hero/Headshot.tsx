@@ -7,10 +7,10 @@ export default function Headshot() {
             <Image
                 src="/headshot-nobg.png"
                 alt="Headshot of me, at my desk, trying to look thoughtful and professional."
-                width={454}
-                height={530.11}
+                width={1012}
+                height={1080}
                 priority
-                className=" rounded-3xl heroImageGlow"
+                className="rounded-3xl heroImageGlow w-headshot h-auto"
             />
         </div>
     )

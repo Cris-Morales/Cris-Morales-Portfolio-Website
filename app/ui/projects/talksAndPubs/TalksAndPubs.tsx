@@ -21,7 +21,7 @@ export default function TalksAndPubs() {
                                             alt={`{card.title} - thumbnail`}
                                             width={335}
                                             height={225}
-                                            className=" rounded-xl relative z-10"
+                                            className=" rounded-xl relative z-10 w-96 h-auto"
                                         />
                                         <Image
                                             src="/externalDark.svg"

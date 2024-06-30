@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "keen-slider": "^6.8.6",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18",
-    "keen-slider": "^6.8.6"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
