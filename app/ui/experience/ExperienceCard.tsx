@@ -17,21 +17,21 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
     const [isExpanded, setExpanded] = useState<boolean>(false);
 
     return (
-        <article className="flex flex-col text-white-text border-2 border-primary rounded-3xl px-7 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 xl:w-7/12">
+        <article className="flex flex-col text-white-text border-2 border-primary rounded-3xl px-7 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 xl:w-1/2">
             <h4 className=" text-xl font-bold">
                 {data.title}
             </h4>
-            <div className="flex justify-between text-base font-bold gap-4">
+            <div className="flex justify-between text-base font-bold gap-4 mb-4">
                 <h4>
                     {data.company}
                 </h4>
                 <h4 className="">{data.timerange}</h4>
             </div>
-            <ul className="list-disc text-base text-light-text opacity-80 mx-4">
+            <ul className="list-disc text-base text-light-text mx-4">
                 {data.bullets.map((bullet: string) => {
                     return (
-                        <li key={bullet}>
-                            <p>
+                        <li key={bullet} className="">
+                            <p className="mb-2 opacity-75 hover:opacity-100 transition-all">
                                 {bullet}
                             </p>
                         </li>
@@ -45,7 +45,7 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                             initial='closed'
                             animate='open'
                             exit='closed'
-                            className="list-disc text-base text-light-text opacity-80 mx-4"
+                            className="list-disc text-base text-light-text mx-4"
                             variants={{
                                 open: { height: "auto" },
                                 closed: { height: 0, transition: { delay: 0.1 } },
@@ -60,7 +60,7 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                                     key={`${bullet} - ${index}`}
                                     variants={itemVariants}
                                 >
-                                    <p>
+                                    <p className="mb-2 opacity-75 hover:opacity-100 transition-all">
                                         {bullet}
                                     </p>
                                 </motion.li>
