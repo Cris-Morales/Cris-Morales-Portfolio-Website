@@ -1,7 +1,10 @@
 'use client'
 import { experienceData } from "@/app/lib/types"
 import { useState } from "react"
-import { motion, Variants } from 'framer-motion'
+import { AnimatePresence, motion, Variants, stagger, delay } from 'framer-motion'
+
+const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
+
 
 const itemVariants: Variants = {
     open: {
@@ -9,11 +12,11 @@ const itemVariants: Variants = {
         y: 0,
         transition: { type: "spring", stiffness: 300, damping: 24 }
     },
-    closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+    closed: { opacity: 0, y: 20 }
 };
 
 export default function ExperienceCard({ data, index }: { data: experienceData, index: number }) {
-    const [expanded, setExpanded] = useState<boolean>(false);
+    const [isExpanded, setExpanded] = useState<boolean>(false);
 
 
     // framer motion variants
@@ -26,8 +29,13 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
     // seems pretty tame for a reduce motion option...
     // second guess would be Layout animation
 
+    // animatePresence for unmounting components
+    // variants to orchestrate child component
+    // stagger.. for that stagger effect
+    // motion components
+
     return (
-        <motion.article animate={expanded ? "open" : "closed"} className="text-white-text border-2 border-primary rounded-3xl px-7 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 xl:w-3/5">
+        <article className="text-white-text border-2 border-primary rounded-3xl px-7 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 xl:w-3/5">
             <h4 className=" text-xl font-bold">
                 {data.title}
             </h4>
@@ -49,42 +57,38 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                 })}
             </ul>
             {data.expandedBullets &&
-                <motion.ul variants={{
-                    open: {
-                        clipPath: "inset(0% 0% 0% 0% round 10px)",
-                        transition: {
-                            type: "spring",
-                            bounce: 0,
-                            duration: 0.7,
-                            delayChildren: 0.3,
-                            staggerChildren: 0.05
-                        }
-                    },
-                    closed: {
-                        clipPath: "inset(10% 50% 90% 50% round 10px)",
-                        transition: {
-                            type: "spring",
-                            bounce: 0,
-                            duration: 0.3
-                        }
+                <AnimatePresence>
+                    {isExpanded &&
+                        <motion.ul
+                            initial='closed'
+                            animate='open'
+                            exit='closed'
+                            className="list-disc text-base text-light-text opacity-80"
+                            variants={{
+                                open: { height: "auto" },
+                                closed: { height: 0, transition: { delay: 0.15 } },
+                            }}
+                            transition={{
+                                delayChildren: 0.15,
+                                staggerChildren: 0.05
+                            }}
+                        >
+                            {data.expandedBullets.map((bullet: string, index: number) => (
+                                <motion.li
+                                    key={`${bullet} - ${index}`}
+                                    variants={itemVariants}
+                                >
+                                    <p>
+                                        {bullet}
+                                    </p>
+                                </motion.li>
+                            ))}
+                        </motion.ul>
                     }
-                }}
-                    style={{ pointerEvents: expanded ? "auto" : "none" }} className={`list-disc text-base text-light-text opacity-80`}>
-                    {data.expandedBullets.map((bullet: string) => {
-                        return (
-                            <motion.li variants={itemVariants} key={bullet}>
-                                <p>
-                                    {bullet}
-                                </p>
-                            </motion.li>
-                        )
-                    })}
-                </motion.ul>
-
-
+                </AnimatePresence>
             }
-            {data.expandedBullets && <button onClick={() => setExpanded(!expanded)}>Expand</button>}
-        </motion.article>
+            {data.expandedBullets && <button className=" font-bold" onClick={() => setExpanded(!isExpanded)}>Expand</button>}
+        </article>
     )
 }
 
