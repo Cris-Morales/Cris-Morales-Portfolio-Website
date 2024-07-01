@@ -1,10 +1,7 @@
 'use client'
 import { experienceData } from "@/app/lib/types"
 import { useState } from "react"
-import { AnimatePresence, motion, Variants, stagger, delay } from 'framer-motion'
-
-const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
-
+import { AnimatePresence, motion, Variants } from 'framer-motion'
 
 const itemVariants: Variants = {
     open: {
@@ -17,22 +14,6 @@ const itemVariants: Variants = {
 
 export default function ExperienceCard({ data, index }: { data: experienceData, index: number }) {
     const [isExpanded, setExpanded] = useState<boolean>(false);
-
-
-    // framer motion variants
-    //  medium-ish speed div expansion
-    //  staggard bullets opacity from 0-1 about as fast as the expansion
-    //      all opacity goes to 0 at a medium-ish speed
-    //      div collapses at medium-ish speed
-    // button is an icon that changes? Arrow down turns to arrow up? (0 to 180 degree animation)
-    //    Keyframes
-    // seems pretty tame for a reduce motion option...
-    // second guess would be Layout animation
-
-    // animatePresence for unmounting components
-    // variants to orchestrate child component
-    // stagger.. for that stagger effect
-    // motion components
 
     return (
         <article className="text-white-text border-2 border-primary rounded-3xl px-7 py-5 m-5 bg-background bg-opacity-35 boxGlow w-11/12 xl:w-3/5">
