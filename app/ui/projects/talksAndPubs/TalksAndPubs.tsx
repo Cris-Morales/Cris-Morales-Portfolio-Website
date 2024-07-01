@@ -5,7 +5,7 @@ import { talksPubsData } from "@/app/lib/types"
 export default function TalksAndPubs() {
 
     return (
-        <section id='talks' className="flex flex-col items-center mb-20 w-full">
+        <section id='talks' className="flex flex-col items-center mb-40 w-full">
             <h3 className='text-primary text-xl mt-5 mb-10'>
                 Talks and Publications
             </h3>

@@ -1,10 +1,8 @@
 import Headshot from "./Headshot"
-import { techstackIcons } from "@/app/lib/portfolioData"
-import Image from "next/image"
 import TechstackCarousel from "./TechstackCarousel"
+import HeroTitle from "./HeroTitle"
 
 export default function Hero() {
-    const myTitles: string[] = ['Software', 'Mechanical', 'Fullstack', 'Robotics']
 
     return (
         <section id="hero" className="h-fit flex flex-col items-center justify-center p-hero md:flex-row md:h-hero md:mb-10 gap-10 md:mt-0 mt-5">
@@ -16,10 +14,7 @@ export default function Hero() {
                 <h1 className="text-5xl text-primary leading-none">
                     Cristian Morales
                 </h1>
-                <h2 className='text-light-text text-2xl font-normal'>
-                    <span>Software
-                    </span> Engineer
-                </h2>
+                <HeroTitle />
                 <div className="carousel">
                     <TechstackCarousel />
                 </div>

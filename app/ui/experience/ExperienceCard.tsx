@@ -85,7 +85,7 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                                     drop-shadow(0 0 1rem #52FFC2)
                                     drop-shadow(0 0 0.5rem #52FFC2)`]
                             },
-                            closed: { rotate: 0, filter: '' }
+                            closed: { rotate: 0, filter: 'drop-shadow(0 0 0rem #52FFC2)' }
                         }}
                         transition={{ duration: 0.2 }}
                         style={{ originY: 0.55 }}
