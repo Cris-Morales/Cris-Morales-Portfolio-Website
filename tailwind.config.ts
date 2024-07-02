@@ -13,6 +13,7 @@ const config: Config = {
       'dark-text': '#01060F',
       'background': '#031026',
       'primary': '#32FFB7',
+      'primary2': '#1dc489',
       'accent': '#5DD0FD',
       'form': '#D2E9EF'
     },

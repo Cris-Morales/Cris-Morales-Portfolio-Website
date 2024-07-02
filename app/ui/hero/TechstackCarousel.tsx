@@ -35,7 +35,7 @@ export default function TechstackCarousel() {
     )
 
     return (
-        <div ref={sliderRef} className="keen-slider h-14 max-w-carousel min-w-carousel my-6 carousel">
+        <div ref={sliderRef} className="keen-slider h-14 max-w-carousel min-w-carousel mb-6 mt-3 carousel">
             {techstackIcons.map((icon: string) => {
                 return (
                     <div className='keen-slider__slide w-12' key={icon}>
