@@ -67,6 +67,7 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                             ))}
                         </motion.ul>
                     }
+
                 </AnimatePresence>
             }
             {data.expandedBullets &&
@@ -87,8 +88,8 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                             },
                             closed: { rotate: 0, filter: 'drop-shadow(0 0 0rem #52FFC2)' }
                         }}
-                        transition={{ duration: 0.2 }}
-                        style={{ originY: 0.55 }}
+                        transition={{ duration: 0.2, delay: 0.3 }}
+                        style={{ originY: 0.50 }}
                     >
                         <Image
                             src={'/caret-down.svg'}

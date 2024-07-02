@@ -36,7 +36,7 @@ export default function HeroTitle() {
     }, [])
 
     return (
-        <h2 className='text-light-text text-2xl font-normal w-44 flex flex-col justify-end pl-2 pt-2 pb-0 my-2 border-2 border-primary2 rounded-2xl'>
+        <h2 className='text-light-text text-2xl font-normal w-48 flex flex-col justify-end pl-2 pt-2 pb-0 my-2 border-2 border-primary2 rounded-2xl'>
             <AnimatePresence
                 mode="wait"
                 onExitComplete={() => {
