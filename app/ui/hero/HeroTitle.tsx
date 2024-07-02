@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion, useMotionValue, Variants } from "framer-motion"
+import { AnimatePresence, motion, Variants } from "framer-motion"
 const titles: string[] = ['Software', 'Mechanical', 'Fullstack', 'Robotics'];
 const itemVariants: Variants = {
     initial: {
@@ -24,8 +24,6 @@ const itemVariants: Variants = {
 export default function HeroTitle() {
     const [titleIndex, setTitleIndex] = useState(0);
     const [show, setShow] = useState(true);
-
-    const containerWidth = useMotionValue('124px');
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -51,7 +49,7 @@ export default function HeroTitle() {
                         animate='show'
                         exit='hide'
                         transition={{
-                            staggerChildren: 0.075,
+                            staggerChildren: 0.05,
                         }}
                         variants={{
                             show: {
