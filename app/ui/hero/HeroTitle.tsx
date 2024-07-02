@@ -5,20 +5,24 @@ import { AnimatePresence, motion, useMotionValue, Variants, animate, useMotionVa
 import TitleAnimation from "./TitleAnimation";
 
 
-const myTitles: string[][] = [['S', 'o', 'f', 't', 'w', 'a', 'r', 'e'], ['M', 'e', 'c', 'h', 'a', 'n', 'i', 'c', 'a', 'l'], ['F', 'u', 'l', 'l', 's', 't', 'a', 'c', 'k'], ['R', 'o', 'b', 'o', 't', 'i', 'c', 's']];
 const titles: string[] = ['Software', 'Mechanical', 'Fullstack', 'Robotics']
 
 
+const layoutVariants: Variants = {
+
+};
+
 const itemVariants: Variants = {
+    initial: {
+        opacity: 0, y: -20, transition: { type: "spring", stiffness: 300, damping: 24 }
+    },
     show: {
         opacity: 1,
         y: 0,
-        transition: { type: "spring", stiffness: 300, damping: 24, delay: 0.5 }
+        transition: { type: "spring", stiffness: 300, damping: 24 }
     },
     hide: {
-        opacity: 0, y: -20, transition: {
-            duration: 0.25
-        }
+        opacity: 0, y: -20, transition: { type: "spring", stiffness: 300, damping: 24 }
     }
 };
 
@@ -29,7 +33,7 @@ export default function HeroTitle() {
     useEffect(() => {
         const interval = setInterval(() => {
             setShow(false);
-        }, 3000);
+        }, 4250);
 
         return () => clearInterval(interval);
     }, [])
@@ -47,12 +51,22 @@ export default function HeroTitle() {
                 {show &&
                     <motion.span
                         key={titles[titleIndex]}
-                        variants={itemVariants}
-                        initial='hide'
+                        initial='initial'
                         animate='show'
                         exit='hide'
+                        transition={{
+                            staggerChildren: 0.05,
+                            delayChildren: 0.250
+                        }}
                     >
-                        {titles[titleIndex]}
+                        {titles[titleIndex].split('').map((char: string, index: number) =>
+                            <motion.span
+                                key={`${titles[titleIndex]} - ${char} - ${index}`}
+                                variants={itemVariants}
+                            >
+                                {char}
+                            </motion.span>
+                        )}
                     </motion.span>
                 }
             </AnimatePresence>
