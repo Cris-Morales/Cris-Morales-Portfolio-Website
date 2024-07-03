@@ -27,7 +27,7 @@ export default function Projects() {
                                     />
                                 </div>
                             }
-                            <p className="text-base text-light-text opacity-75 w-3/5">
+                            <p className="text-base text-light-text opacity-75 w-3/5 hover:opacity-100 transition-all">
                                 {project.description}
                             </p>
                         </div>
