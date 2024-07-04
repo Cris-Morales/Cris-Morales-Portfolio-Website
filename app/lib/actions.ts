@@ -1,7 +1,8 @@
 'use server';
 
 import { Resend } from 'resend';
-import { z } from 'zod'
+import { z } from 'zod';
+import * as sanitizeHtml from "sanitize-html";
 export type State = {
     errors?: {
         name?: string[];
@@ -13,10 +14,10 @@ export type State = {
 };
 
 const FormSchema = z.object({
-    name: z.string(),
+    name: z.string().min(1, { message: 'Name is required.' }).max(50, { message: 'Name must be 50 characters or less.' }),
     email: z.string().email({ message: 'Please enter a valid email address.' }),
-    subject: z.string(),
-    message: z.string(),
+    subject: z.string().min(1, { message: 'Subject is required.' }).max(100, { message: 'Subject must be 100 characters or less.' }),
+    message: z.string().min(1, { message: 'Message is required.' }).max(1000, { message: 'Message must be 1000 characters or less.' }),
 });
 
 
@@ -36,19 +37,28 @@ export async function sendEmail(prevState: State, formData: FormData) {
     if (!validatedFields.success) {
         return {
             errors: validatedFields.error.flatten().fieldErrors,
-            message: 'Missing Fields. Failed to Send Email.',
+            message: 'There were errors with your submission. Please correct them and try again.',
         };
     }
+
+    const sanitizedData: any = {
+        name: sanitizeHtml.default(validatedFields.data.name),
+        email: sanitizeHtml.default(validatedFields.data.email),
+        subject: sanitizeHtml.default(validatedFields.data.subject),
+        message: sanitizeHtml.default(validatedFields.data.message),
+    };
+
+
+    console.log(sanitizedData);
 
     try {
 
         const { data, error } = await resend.emails.send({
             from: `Portfolio Contact Form <PortfolioContact@resend.dev>`,
             to: 'crismorales@protonmail.com',
-            subject: `${validatedFields.data.subject} - ${validatedFields.data.name}`,
-            reply_to: validatedFields.data.email,
-            text: validatedFields.data.message
-            // react: EmailTemplate(validatedFields.data)
+            subject: `${sanitizedData.subject} - ${sanitizedData.name}`,
+            reply_to: sanitizedData.email,
+            text: sanitizedData.message
         })
 
         return {
