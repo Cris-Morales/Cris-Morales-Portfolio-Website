@@ -1,6 +1,5 @@
 'use server';
 
-import EmailTemplate from './EmailTemplate';
 import { Resend } from 'resend';
 import { z } from 'zod'
 export type State = {
@@ -44,10 +43,11 @@ export async function sendEmail(prevState: State, formData: FormData) {
     try {
 
         const { data, error } = await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: `Portfolio Contact Form <PortfolioContact@resend.dev>`,
             to: 'crismorales@protonmail.com',
-            subject: 'Portfolio Contact Form Message',
-            text: 'test'
+            subject: `${validatedFields.data.subject} - ${validatedFields.data.name}`,
+            reply_to: validatedFields.data.email,
+            text: validatedFields.data.message
             // react: EmailTemplate(validatedFields.data)
         })
 
