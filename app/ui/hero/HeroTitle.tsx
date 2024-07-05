@@ -28,7 +28,7 @@ export default function HeroTitle() {
     useEffect(() => {
         const interval = setInterval(() => {
             setShow(false);
-        }, 4000);
+        }, 3750);
 
         return () => clearInterval(interval);
     }, [])

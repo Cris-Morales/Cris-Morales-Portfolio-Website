@@ -15,7 +15,8 @@ const config: Config = {
       'primary': '#32FFB7',
       'primary2': '#1dc489',
       'accent': '#5DD0FD',
-      'form': '#D2E9EF'
+      'form': '#D2E9EF',
+      'error': '#C24242'
     },
     fontSize: {
       sm: '0.750rem',

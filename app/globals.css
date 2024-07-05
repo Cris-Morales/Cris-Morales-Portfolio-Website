@@ -91,6 +91,10 @@ a[class*="active"] .navLine {
   transition: var(--app-transition-duration);
 }
 
+.submitGlow {
+  filter: drop-shadow(0 0 0.8rem #52FFC2) drop-shadow(0 0 0.5rem #52ffc27a);
+}
+
 .iconGlowXl {
   transition: var(--app-transition-duration);
 }
