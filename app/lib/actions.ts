@@ -3,6 +3,8 @@
 import { Resend } from 'resend';
 import { z } from 'zod';
 import * as sanitizeHtml from "sanitize-html";
+import { EmailTemplate } from './EmailTemplate';
+import React from 'react';
 export type State = {
     errors?: {
         name?: string[];
@@ -49,16 +51,13 @@ export async function sendEmail(prevState: State, formData: FormData) {
     };
 
 
-    console.log(sanitizedData);
-
     try {
-
         const { data, error } = await resend.emails.send({
             from: `Portfolio Contact Form <PortfolioContact@resend.dev>`,
             to: 'crismorales@protonmail.com',
             subject: `${sanitizedData.subject} - ${sanitizedData.name}`,
             reply_to: sanitizedData.email,
-            text: sanitizedData.message
+            react: React.createElement(EmailTemplate, { senderName: sanitizedData.name, senderEmail: sanitizedData.email, senderMessage: sanitizedData.message, senderSubject: sanitizedData.subject })
         })
 
         return {

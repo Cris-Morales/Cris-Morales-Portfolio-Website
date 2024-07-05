@@ -1,20 +1,39 @@
-import * as React from 'react';
-
+import React from 'react';
+import {
+    Html,
+    Body,
+    Heading,
+    Hr,
+    Container,
+    Preview,
+    Section,
+    Text
+} from "@react-email/components";
+import { Tailwind } from '@react-email/tailwind';
 interface EmailTemplateProps {
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
+    senderName: string;
+    senderEmail: string;
+    senderMessage: string;
+    senderSubject: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
-    name, email, subject, message,
+    senderName, senderEmail, senderMessage, senderSubject
 }) => (
-    <div>
-        <h1 >New Form Submission</h1>
-        <p>Name: {name}</p>
-        <p>Email: {email}</p>
-        <p>Subject: {subject}</p>
-        <p>Message: {message}</p>
-    </div>
+    <Html>
+        <Preview >New message from your portfolio sites</Preview>
+        <Tailwind>
+            <Body >
+                <Container >
+                    <Section>
+                        <Heading>You received the following message from the contact form</Heading>
+                        <Text className='font-bold text-xl'>Subject: {senderSubject}</Text>
+                        <Text>Message: <br />{senderMessage}</Text>
+                        <Hr />
+                        <Text>- {senderName} at {senderEmail}</Text>
+                    </Section>
+                </Container>
+            </Body>
+        </Tailwind>
+    </Html>
 );
