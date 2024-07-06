@@ -6,12 +6,13 @@ import * as sanitizeHtml from "sanitize-html";
 import { EmailTemplate } from './EmailTemplate';
 import React from 'react';
 export type formState = {
-    message: null | string,
+    status: 'success' | 'error' | null
     errors: {
         name?: string[] | undefined,
         email?: string[] | undefined,
         subject?: string[] | undefined,
-        message?: string[] | undefined
+        message?: string[] | undefined,
+        server?: string | undefined
     } | null,
     fieldValues: {
         name: null | string,
@@ -47,8 +48,8 @@ export async function sendEmail(prevState: formState, formData: FormData): Promi
 
         console.log('here')
         return {
+            status: 'error',
             errors: validatedFields.error.flatten().fieldErrors,
-            message: 'There were errors with your submission. Please correct them and try again.',
             fieldValues: {
                 name: null,
                 email: null,
@@ -75,14 +76,13 @@ export async function sendEmail(prevState: formState, formData: FormData): Promi
             react: React.createElement(EmailTemplate, { senderName: sanitizedData.name, senderEmail: sanitizedData.email, senderMessage: sanitizedData.message, senderSubject: sanitizedData.subject })
         });
 
-        console.log('Successfully sent email: ', data);
-
         if (error) {
             throw error
         };
 
+        console.log('Successfully sent email: ', data);
         return {
-            message: 'success',
+            status: 'success',
             errors: null,
             fieldValues: {
                 name: null,
@@ -95,7 +95,7 @@ export async function sendEmail(prevState: formState, formData: FormData): Promi
     } catch (error) {
         console.error(`Error in Send Email Server Action: ${error}`);
         return {
-            message: `${error}`,
+            status: 'error',
             errors: null,
             fieldValues: {
                 name: null,

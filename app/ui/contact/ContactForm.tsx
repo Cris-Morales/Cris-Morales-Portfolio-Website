@@ -7,7 +7,7 @@ import ContactButton from './ContactButton';
 
 export default function ContactForm() {
     const initialState: formState = {
-        message: null,
+        status: null,
         errors: null,
         fieldValues: {
             name: null,
@@ -21,38 +21,46 @@ export default function ContactForm() {
     const formRef = useRef<HTMLFormElement>(null);
 
     useEffect(() => {
-        if (formState.message === "success") {
+        if (formState.status === "success") {
             formRef.current?.reset();
         }
     }, [formState]);
 
     return (
         <form ref={formRef} action={dispatch} className="border-2 border-primary boxGlow rounded-3xl flex flex-col justify-center items-center p-5 xl:px-5 xl:py-5 w-5/6 xl:w-1/3">
-            <label className="mb-2 text-base">
+            <label className="mb-1 text-base">
                 Name
             </label>
-            <input maxLength={50} type="text" id="name" name="name" className="rounded-lg bg-background bg-opacity-35 border-2 border-primary py-1 px-2 mb-2 w-3/4" onChange={(event) => {
-                event.target.value.length != 0 ? event.target.classList.add('boxGlow') : event.target.classList.remove('boxGlow');
+            <input maxLength={50} type="text" id="name" name="name" className={`rounded-lg bg-background bg-opacity-35 border-2 py-1 px-2 mb-2 w-3/4 border-primary`} onChange={(event) => {
+                event.target.value.length != 0 ? event.target.classList.add('inputGlow') : event.target.classList.remove('inputGlow');
+                if (formState.errors?.name) {
+                    event.target.classList.remove('border-error');
+                    event.target.classList.remove('inputError');
+                    event.target.classList.add('border-primary');
+                };
             }} />
-            <label className="mb-2 text-base">
+            {formState.errors?.name && <span className='text-error -mt-2 mb-2'>{formState.errors.name}</span>}
+            <label className="mb-1 text-base">
                 Email
             </label>
             <input type='email' id="email" name='email' className="rounded-lg bg-background bg-opacity-35 border-2 border-primary py-1 px-2 mb-4 w-3/4" onChange={(event) => {
-                event.target.value.length != 0 ? event.target.classList.add('boxGlow') : event.target.classList.remove('boxGlow');
+                event.target.value.length != 0 ? event.target.classList.add('inputGlow') : event.target.classList.remove('inputGlow');
             }} />
-            <label className="mb-2 text-base" >
+            {formState.errors?.email && <span className='text-error -mt-4 mb-2'>{formState.errors.email}</span>}
+            <label className="mb-1 text-base" >
                 Subject
             </label>
             <input maxLength={100} type="text" id='subject' name="subject" className="rounded-lg bg-background bg-opacity-35 border-2 border-primary py-1 px-2 mb-4 w-3/4" onChange={(event) => {
-                event.target.value.length != 0 ? event.target.classList.add('boxGlow') : event.target.classList.remove('boxGlow');
+                event.target.value.length != 0 ? event.target.classList.add('inputGlow') : event.target.classList.remove('inputGlow');
             }} />
-            <label className="mb-2 text-base">
+            {formState.errors?.subject && <span className='-mt-4 text-error mb-2'>{formState.errors.subject}</span>}
+            <label className="mb-1 text-base">
                 Message
             </label>
             <textarea maxLength={1000} id='message' name="message" className="rounded-lg bg-background bg-opacity-35 border-2 border-primary py-2 px-2 mb-4 text-wrap w-3/4 max-h-fit min-h-40" onChange={(event) => {
-                event.target.value.length != 0 ? event.target.classList.add('boxGlow') : event.target.classList.remove('boxGlow');
+                event.target.value.length != 0 ? event.target.classList.add('inputGlow') : event.target.classList.remove('inputGlow');
             }} />
-
+            {formState.errors?.message && <span className='-mt-4 text-error mb-2'>{formState.errors.message}</span>}
 
             {/* < div className='flex gap-2 justify-center items-center h-8 text-xl font-bold iconGlow bg-primary w-1/4 rounded-xl my-2 submitGlow'>
                 <span className='sr-only'>Loading...</span>
@@ -87,7 +95,7 @@ export default function ContactForm() {
             </div> */}
 
 
-            {formState.message === 'success' && <span className="text-base">
+            {formState.status === 'success' && <span className="text-base success text-center">
                 Success! <br /> We'll be in touch soon! :)
             </span>}
         </form>)
