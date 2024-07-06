@@ -35,7 +35,6 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(prevState: formState, formData: FormData): Promise<formState> {
 
-
     const validatedFields = FormSchema.safeParse({
         name: formData.get('name'),
         email: formData.get('email'),
@@ -45,8 +44,6 @@ export async function sendEmail(prevState: formState, formData: FormData): Promi
 
 
     if (!validatedFields.success) {
-
-        console.log('here')
         return {
             status: 'error',
             errors: validatedFields.error.flatten().fieldErrors,
@@ -81,6 +78,7 @@ export async function sendEmail(prevState: formState, formData: FormData): Promi
         };
 
         console.log('Successfully sent email: ', data);
+
         return {
             status: 'success',
             errors: null,

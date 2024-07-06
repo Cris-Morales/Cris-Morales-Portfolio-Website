@@ -1,7 +1,7 @@
 'use client';
 
 import { sendEmail, formState } from '@/app/lib/actions';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { useEffect, useRef } from 'react';
 import ContactButton from './ContactButton';
 
