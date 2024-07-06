@@ -84,7 +84,7 @@ export default function ContactForm() {
                             <span>Message Sent!</span>
                         </div> : <span>Submit</span>}
             </button> */}
-            <ContactButton />
+            <ContactButton status={formState.status} />
 
 
 
@@ -93,10 +93,5 @@ export default function ContactForm() {
             {/* <div className='text-error flex gap-2 justify-center items-center text-xl font-bold bg-background bg-opacity-35 w-3/4 rounded-xl my-2'>
                 <span>Error, please try again later.</span>
             </div> */}
-
-
-            {formState.status === 'success' && <span className="text-base success text-center">
-                Success! <br /> We'll be in touch soon! :)
-            </span>}
         </form>)
 }
