@@ -61,37 +61,6 @@ export default function ContactForm() {
                 event.target.value.length != 0 ? event.target.classList.add('inputGlow') : event.target.classList.remove('inputGlow');
             }} />
             {formState.errors?.message && <span className='-mt-4 text-error mb-2'>{formState.errors.message}</span>}
-
-            {/* < div className='flex gap-2 justify-center items-center h-8 text-xl font-bold iconGlow bg-primary w-1/4 rounded-xl my-2 submitGlow'>
-                <span className='sr-only'>Loading...</span>
-                <div className='h-2 w-2 bg-background rounded-full animate-bounce [animation-delay:-0.3s] boxGlow'></div>
-                <div className='h-2 w-2 bg-background rounded-full animate-bounce [animation-delay:-0.15s] boxGlow'></div>
-                <div className='h-2 w-2 bg-background rounded-full animate-bounce boxGlow'></div>
-                </div> */}
-
-
-            {/* normal, or when there are left out inputs, if they tried postman or something there sound be a message to their console anyway */}
-            {/* < button type="submit" disabled={pending} className=" text-background text-xl font-bold iconGlow bg-primary w-3/4 rounded-xl my-2" onClick={() => console.log('pending', pending)}>
-                {pending ? <>
-                    <span className='sr-only'>Loading...</span>
-                    <div className='h-2 w-2 bg-background rounded-full animate-bounce [animation-delay:-0.3s] boxGlow'></div>
-                    <div className='h-2 w-2 bg-background rounded-full animate-bounce [animation-delay:-0.15s] boxGlow'></div>
-                    <div className='h-2 w-2 bg-background rounded-full animate-bounce boxGlow'></div>
-                </> :
-                    formState.message === 'success' ?
-                        // success message and feedback, whole form disabled
-                        < div className='text-background flex justify-center items-center h-8 text-xl font-bold iconGlow bg-primary rounded-xl my-2 submitGlow'>
-                            <span>Message Sent!</span>
-                        </div> : <span>Submit</span>}
-            </button> */}
-            <ContactButton status={formState.status} />
-
-
-
-
-            {/* This error appears when there's a rate limit or max email reached */}
-            {/* <div className='text-error flex gap-2 justify-center items-center text-xl font-bold bg-background bg-opacity-35 w-3/4 rounded-xl my-2'>
-                <span>Error, please try again later.</span>
-            </div> */}
+            <ContactButton status={formState.status} serverError={formState.errors?.server} />
         </form>)
 }

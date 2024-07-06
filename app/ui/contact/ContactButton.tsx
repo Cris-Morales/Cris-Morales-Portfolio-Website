@@ -1,10 +1,9 @@
 'use client';
 
-import { sendEmail, formState } from '@/app/lib/actions';
-import { useFormState, useFormStatus } from 'react-dom';
-import { useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 
-export default function ContactButton({ status }: { status: string }) {
+export default function ContactButton({ status, serverError }: { status: string | null, serverError: string | undefined }) {
     const { pending } = useFormStatus();
     return (
         <>
@@ -22,6 +21,11 @@ export default function ContactButton({ status }: { status: string }) {
             </button>
             {(status === 'success') && <span className="text-base success text-center">
                 Success! <br /> We'll be in touch soon! :)
+            </span>}
+            {serverError && <span className="text-base text-center text-error text-wrap">
+                {serverError}
+                <br />
+                Or you can send me a message directly at <a className='iconGlow text-primary' href='mailto:CrisMorales@protonmail.com'>CrisMorales@protonmail.com</a>
             </span>}
         </>
     )

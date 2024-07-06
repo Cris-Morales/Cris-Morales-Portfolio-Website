@@ -96,7 +96,7 @@ export async function sendEmail(prevState: formState, formData: FormData): Promi
         console.error(`Error in Send Email Server Action: ${error}`);
         return {
             status: 'error',
-            errors: null,
+            errors: { server: 'An error occured sending message. Please try again later.' },
             fieldValues: {
                 name: null,
                 email: null,
