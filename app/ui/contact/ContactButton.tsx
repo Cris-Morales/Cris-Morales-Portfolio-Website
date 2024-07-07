@@ -63,14 +63,44 @@ export default function ContactButton({ status, serverError }: { status: string 
                 </AnimatePresence>
             </button>
             <AnimatePresence>
-                {(status === 'success') && <span className="text-base success text-center">
-                    Success! <br /> We'll be in touch soon! :)
-                </span>}
-                {serverError && <span className="text-base text-center text-error text-wrap">
-                    {serverError}
-                    <br />
-                    Or you can send me a message directly at <a className='iconGlow text-primary' href='mailto:CrisMorales@protonmail.com'>CrisMorales@protonmail.com</a>
-                </span>}
+                {(status === 'success') &&
+                    <motion.span
+                        className="text-base success text-center"
+                        initial={{
+                            opacity: 0,
+                            height: 0
+                        }}
+                        animate={{
+                            opacity: 1,
+                            height: 'auto'
+                        }}
+                        exit={{
+                            opacity: 0,
+                            height: 'auto'
+                        }}
+                    >
+                        Success! <br /> We'll be in touch soon! :)
+                    </motion.span>}
+                {serverError &&
+                    <motion.span
+                        className="text-base text-center text-error text-wrap"
+                        initial={{
+                            opacity: 0,
+                            height: 0
+                        }}
+                        animate={{
+                            opacity: 1,
+                            height: 'auto'
+                        }}
+                        exit={{
+                            opacity: 0,
+                            height: 'auto'
+                        }}
+                    >
+                        {serverError}
+                        <br />
+                        Or you can send me a message directly at <a className='iconGlow text-primary' href='mailto:CrisMorales@protonmail.com'>CrisMorales@protonmail.com</a>
+                    </motion.span>}
             </AnimatePresence>
         </>
     )
