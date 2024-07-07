@@ -4,7 +4,7 @@ import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/re
 import { techstackIcons } from "@/app/lib/portfolioData"
 import Image from "next/image"
 
-const animation = { duration: 15000, easing: (t) => t }
+const animation = { duration: 15000, easing: (t: number) => t }
 
 export default function TechstackCarousel() {
     const [sliderRef, instanceRef] = useKeenSlider(
@@ -12,7 +12,6 @@ export default function TechstackCarousel() {
             loop: true,
             drag: true,
             renderMode: "performance",
-
             slides: {
                 number: 17,
                 perView: 7,
@@ -30,20 +29,20 @@ export default function TechstackCarousel() {
             },
         },
         [
-            // add plugins here
         ]
     )
 
     return (
-        <div ref={sliderRef} className="keen-slider h-14 max-w-carousel min-w-carousel mb-6 mt-3 carousel">
-            {techstackIcons.map((icon: string) => {
+        <div ref={sliderRef} className="keen-slider overflow-x-hidden h-14 max-w-carousel min-w-carousel mb-6 mt-3 carousel">
+            {techstackIcons.map((icon: string, index: number) => {
                 return (
-                    <div className='keen-slider__slide w-12' key={icon}>
+                    <div className={`keen-slider__slide number-slide${index} flex justify-center items-center min-w-14`} key={icon}>
                         <Image
                             src={icon}
                             alt={icon.slice(16, -4)}
                             width={50}
                             height={50}
+                            className=''
                         />
                     </div>
                 )

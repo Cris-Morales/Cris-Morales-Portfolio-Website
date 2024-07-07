@@ -7,7 +7,7 @@ export default function ContactButton({ status, serverError }: { status: string 
     const { pending } = useFormStatus();
     return (
         <>
-            < button type="submit" disabled={pending} className=" text-background text-xl flex justify-center items-center font-bold iconGlow bg-primary w-3/4 rounded-xl my-2 h-8" onClick={() => console.log('pending', pending)}>
+            < button type="submit" disabled={pending} className=" text-background text-xl flex justify-center items-center font-bold iconGlow bg-primary w-3/4 rounded-xl my-2 h-8">
                 <AnimatePresence>
                     {pending ?
                         <motion.div
@@ -48,17 +48,6 @@ export default function ContactButton({ status, serverError }: { status: string 
                         >
                             Send
                         </motion.span>
-                        // <motion.span
-                        //     >S</motion.span>
-
-                        //     <motion.span
-                        //     >p</motion.span>
-
-                        //     <motion.span
-                        //     >a</motion.span>
-
-                        //     <motion.span
-                        //     >n</motion.span>
                     }
                 </AnimatePresence>
             </button>
