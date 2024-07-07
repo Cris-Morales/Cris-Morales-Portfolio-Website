@@ -17,11 +17,11 @@ export default function AboutMe() {
                         I am currently open to new opportunities!
                         <span className='text-primary ml-1 textGlow'>
                             <a href='#contact'>
-                                Let's create something awesome together :)
+                                Let&apos;s create something awesome together :)
                             </a>
                         </span>
                         <br /><br />
-                        When I'm not working, you can find me spending time with my wife, training in boxing, grappling, or mixed martial arts, caring for my animals, or gaming with friends.
+                        When I&apos;m not working, you can find me spending time with my wife, training in boxing, grappling, or mixed martial arts, caring for my animals, or gaming with friends.
                     </p>
 
                 </div>

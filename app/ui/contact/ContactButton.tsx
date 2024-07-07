@@ -68,7 +68,7 @@ export default function ContactButton({ status, serverError }: { status: string 
                             height: 'auto'
                         }}
                     >
-                        Success! <br /> We'll be in touch soon! :)
+                        Success! <br /> We&apos;ll be in touch soon! :)
                     </motion.span>}
                 {serverError &&
                     <motion.span

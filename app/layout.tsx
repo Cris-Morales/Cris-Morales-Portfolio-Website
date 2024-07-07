@@ -16,7 +16,7 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${nunito.className} antialiased scroll-smooth`}>
       <body className={`${nunito.className} antialiased`}>
         <div className="flex flex-col bg-background" id='home'>
           <Header />

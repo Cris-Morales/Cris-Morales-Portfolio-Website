@@ -31,7 +31,7 @@ export default function TalksAndPubs() {
                                             className="-mt-6 z-10 mr-2 "
                                         />
                                     </div>}
-                                <h5 className="md:w-4/5">"{card.title}"</h5>
+                                <h5 className="md:w-4/5">&quot;{card.title}&quot;</h5>
                             </a>
                         </article>
                     );
