@@ -3,10 +3,12 @@ import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
 import { techstackIcons } from "@/app/lib/portfolioData"
 import Image from "next/image"
+import { useReducedMotion } from 'framer-motion'
 
 const animation = { duration: 15000, easing: (t: number) => t }
 
 export default function TechstackCarousel() {
+    const reduceMotion = useReducedMotion();
     const [sliderRef, instanceRef] = useKeenSlider(
         {
             loop: true,
@@ -19,13 +21,19 @@ export default function TechstackCarousel() {
             },
             mode: 'free-snap',
             created(s) {
-                s.moveToIdx(5, true, animation)
+                if (!reduceMotion) {
+                    s.moveToIdx(5, true, animation)
+                }
             },
             updated(s) {
-                s.moveToIdx(s.track.details.abs + 5, true, animation)
+                if (!reduceMotion) {
+                    s.moveToIdx(s.track.details.abs + 5, true, animation)
+                }
             },
             animationEnded(s) {
-                s.moveToIdx(s.track.details.abs + 5, true, animation)
+                if (!reduceMotion) {
+                    s.moveToIdx(s.track.details.abs + 5, true, animation)
+                }
             },
         },
         [

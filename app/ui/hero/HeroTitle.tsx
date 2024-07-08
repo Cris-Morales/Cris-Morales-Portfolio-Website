@@ -1,29 +1,33 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion, Variants } from "framer-motion"
+import { AnimatePresence, motion, Variants, useReducedMotion } from "framer-motion"
 const titles: string[] = ['Software', 'Mechanical', 'Fullstack', 'Robotics'];
-const itemVariants: Variants = {
-    initial: {
-        opacity: 0,
-        y: -20,
-        transition: { type: "spring", stiffness: 300, damping: 30 }
-    },
-    show: {
-        opacity: 1,
-        y: 0,
-        transition: { type: "spring", stiffness: 300, damping: 30 }
-    },
-    hide: {
-        opacity: 0,
-        y: -20,
-        transition: { type: "spring", stiffness: 300, damping: 30 }
-    }
-};
+
+
 
 export default function HeroTitle() {
     const [titleIndex, setTitleIndex] = useState(0);
     const [show, setShow] = useState(true);
+
+    const reduceMotion = useReducedMotion();
+    const itemVariants: Variants = {
+        initial: {
+            opacity: 0,
+            y: reduceMotion ? 0 : -20,
+            transition: { type: "spring", stiffness: 300, damping: 30 }
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: { type: "spring", stiffness: 300, damping: 30 }
+        },
+        hide: {
+            opacity: 0,
+            y: reduceMotion ? 0 : -20,
+            transition: { type: "spring", stiffness: 300, damping: 30 }
+        }
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {

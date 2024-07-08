@@ -1,6 +1,7 @@
 import Headshot from "./Headshot"
 import TechstackCarousel from "./TechstackCarousel"
 import HeroTitle from "./HeroTitle"
+import ReduceMotionTechstackCarousel from "./ReduceMotionTechstack"
 
 export default function Hero() {
 
@@ -15,7 +16,7 @@ export default function Hero() {
                     Cristian Morales
                 </h1>
                 <HeroTitle />
-                <div className="carousel">
+                <div className="carousel ">
                     <TechstackCarousel />
                 </div>
                 <a className="text-dark-text font-bold text-xl bg-primary rounded-xl h-32 p-3 iconGlow" href='#contact'>
