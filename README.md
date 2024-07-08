@@ -3,16 +3,16 @@
 
 This is my portfolio website github repository. Feel free to check out the files for how I designed this application. <br />
 
-## TechStack
-typescript, react, next.js, tailwindCss, Framer Motion, Keen Slider, Resend, React Email, Sanitize HTML, Zod, Sharp
+## Technologies
 
 <div align="center" width="100%">
 
-[![Typescript][TS.js]][TS-url][![React][React.js]][React-url][![TailwindCSS][TailwindCSS]][Tailwind-url][![Git][Git]][Git-url][![HTML5][HTML5]][HTML5-url][![CSS3][CSS3]][CSS3-url]
+[![Typescript][TS.js]][TS-url][![React][React.js]][React-url][![Next.js][Next.js]][Next.js-url][![TailwindCSS][TailwindCSS]][Tailwind-url][![Git][Git]][Git-url][![HTML5][HTML5]][HTML5-url][![CSS3][CSS3]][CSS3-url][![Vercel][Vercel]][Vercel-url]
 </div>
 
 ## About
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 
 ## Getting Started
 
@@ -30,12 +30,11 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-be familiar with Next.js architecture before forking this portfolio template for yourself.
+You should be familiar with Next.js architecture to work with this repository.
 
-lib directory contains relavent types, server actions, email template for resend, and portfolio data which will allow the sections to automaticall populate with cards related to that data. 
-Please replace the static assets with your own, unless you get a job pretending to be me and send it my way if the pay is good ;)
-
-
+- This app uses [Resend](https://resend.com/) for its 3rd party Email API. You will need to sign up for Resend and save your API key in an environment variable to utilize the Contact Form. 
+- The app/lib directory contains relavent types, server actions, email template for Resend using [React Email](https://react.email/), and portfolio data which will allow the sections to automatically populate with cards related to that data. 
+- There are primarily 2 libraries used for animations: [Keen-Slider](https://keen-slider.io/) for the Marquee effect on the Hero Section, and [Framer Motion](https://www.framer.com/motion/) for the the Title change, experience expansion, and Contact form transitions. The active Navigation is made using Vanilla Javascript, though I could imagine you could use Framer Motion for this effect as well.
 
 ---
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -61,8 +60,7 @@ Please replace the static assets with your own, unless you get a job pretending 
 [TailwindCSS]:
   https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
-https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
-
-https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-
-https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white
+[Vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
+[Vercel-url]: https://vercel.com/home
+[Next.js]: https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next.js-url]: https://nextjs.org/
