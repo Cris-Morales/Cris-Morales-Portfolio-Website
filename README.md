@@ -36,6 +36,11 @@ You should be familiar with Next.js architecture to work with this repository.
 - The app/lib directory contains relavent types, server actions, email template for Resend using [React Email](https://react.email/), and portfolio data which will allow the sections to automatically populate with cards related to that data. 
 - There are primarily 2 libraries used for animations: [Keen-Slider](https://keen-slider.io/) for the Marquee effect on the Hero Section, and [Framer Motion](https://www.framer.com/motion/) for the the Title change, experience expansion, and Contact form transitions. The active Navigation is made using Vanilla Javascript, though I could imagine you could use Framer Motion for this effect as well.
 
+
+## License
+
+[MIT License](LICENSE)
+
 ---
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
