@@ -1,7 +1,6 @@
 import Headshot from "./Headshot"
 import TechstackCarousel from "./TechstackCarousel"
 import HeroTitle from "./HeroTitle"
-import { Suspense } from "react"
 
 export default function Hero() {
 
@@ -17,9 +16,7 @@ export default function Hero() {
                 </h1>
                 <HeroTitle />
                 <div className="carousel">
-                    <Suspense>
-                        <TechstackCarousel />
-                    </Suspense>
+                    <TechstackCarousel />
                 </div>
                 <a className="text-dark-text font-bold text-xl bg-primary rounded-xl h-32 p-3 iconGlow" href='#contact'>
                     Work with Me!

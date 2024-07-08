@@ -93,7 +93,7 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                     >
                         <Image
                             src={'/caret-down.svg'}
-                            alt='Expand'
+                            alt='Expand/Collapse Bullets'
                             width={32}
                             height={32}
                         />

@@ -39,7 +39,7 @@ export default function TechstackCarousel() {
                     <div className={`keen-slider__slide number-slide${index} flex justify-center items-center min-w-14`} key={icon}>
                         <Image
                             src={icon}
-                            alt={icon.slice(16, -4)}
+                            alt={icon.slice(16, -4) + 'Icon'}
                             width={50}
                             height={50}
                             className=''

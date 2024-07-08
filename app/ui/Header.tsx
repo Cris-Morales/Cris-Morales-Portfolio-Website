@@ -32,7 +32,7 @@ export default function Header() {
                         className="iconGlowXl">
                         <Image
                             src="/email.svg"
-                            alt="Cristian's Buisness Email"
+                            alt="Mail to: Cristian's Buisness Email"
                             width={37}
                             height={34}
                         />

@@ -50,7 +50,6 @@ export default function Projects() {
                                             width={32}
                                             height={32}
                                             className=" min-w-8"
-
                                         />
                                     </a>}
                                 {project.externalLink &&

@@ -14,16 +14,15 @@ export default function AboutMe() {
                         <br /><br />
                         Today, I am a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 50,000 downloads on DockerHub and 850 stars on GitHub.
                         <br /><br />
-                        I am currently open to new opportunities!
+                        I am currently open to new work opportunities!
                         <span className='text-primary ml-1 textGlow'>
                             <a href='#contact'>
                                 Let&apos;s create something awesome together :)
                             </a>
                         </span>
                         <br /><br />
-                        When I&apos;m not working, you can find me spending time with my wife, training in boxing, grappling, or mixed martial arts, caring for my animals, or gaming with friends.
+                        When I&apos;m not working, you can find me spending time with my wife, training in boxing, grappling, or mixed martial arts, caring for my animals, playing music or gaming with my  friends.
                     </p>
-
                 </div>
                 <div className="flex flex-col items-center lg:w-1/2 lg:mr-5 self-center pt-10">
                     <div className="w-2/5 md:w-1/3  lg:w-5/12 xl:w-1/3 2xl:w-5/12 relative aboutRight top-8 sm:top-14 z-20 ">
@@ -38,7 +37,7 @@ export default function AboutMe() {
                     <div className="w-2/5 md:w-1/3 lg:w-5/12 xl:w-1/3 2xl:w-5/12 relative aboutLeft z-10">
                         <Image
                             src="/aboutMe/meAndDoggo.jpg"
-                            alt="Me and our family Chonk, I mean, Dog in a tortilla blanket."
+                            alt="Me and our family Chonk, I mean Dog, in a tortilla blanket."
                             width={793}
                             height={887}
                             className="rounded-3xl aboutImageGlow "
@@ -52,7 +51,6 @@ export default function AboutMe() {
                             height={995}
                             className="rounded-3xl aboutImageGlow"
                         />
-                        {/* <sm: good, sm: good md: good lg-xl after xl-lg looks terrible, then good, then before small looks terrrible again */}
                     </div>
                 </div>
             </article>
