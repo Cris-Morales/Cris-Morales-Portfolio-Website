@@ -5,16 +5,13 @@ import Header from "./ui/Header";
 
 export const metadata: Metadata = {
   title: "Cristian Morales",
-  description: "Cristian Morales, Engineer, Web Developer."
+  description: "Cristian Morales: Engineer and Web Developer.",
+  keywords: ['Cristian', 'Morales', 'Software Engineer', 'Engineer', 'Mechanical Engineer'],
+  authors: [{ name: 'Cristian' }],
+  creator: 'Cristian Morales',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-
-
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${nunito.className} antialiased scroll-smooth`}>
       <body className={`${nunito.className} antialiased`}>

@@ -1,7 +1,6 @@
 import Headshot from "./Headshot"
 import TechstackCarousel from "./TechstackCarousel"
 import HeroTitle from "./HeroTitle"
-import ReduceMotionTechstackCarousel from "./ReduceMotionTechstack"
 
 export default function Hero() {
 
