@@ -15,6 +15,7 @@ export default function AboutMe() {
                         Today, I am a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 50,000 downloads on DockerHub and 850 stars on GitHub.
                         <br /><br />
                         I am currently open to new work opportunities!
+                        <br />
                         <span className='text-primary ml-1 textGlow'>
                             <a href='#contact'>
                                 Let&apos;s create something awesome together :)
