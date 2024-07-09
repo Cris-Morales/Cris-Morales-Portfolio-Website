@@ -9,7 +9,7 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      'light-text': 'FFFFFF',
+      'light-text': '#F5F9FF',
       'dark-text': '#01060F',
       'background': '#031026',
       'primary': '#32FFB7',

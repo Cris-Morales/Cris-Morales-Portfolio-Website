@@ -5,14 +5,14 @@ import Image from "next/image"
 export default function Projects() {
 
     return (
-        <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-20 mt-10">
+        <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-20 mt-10 text-white-text">
             <h3 className='text-primary text-3xl'>
                 Projects
             </h3>
             {projects.map((project: projectData, index) => {
                 return (
-                    <article key={`${project.title}-${index}`} className="text-white-text border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 xl:w-1/2">
-                        <h4 className=" text-xl font-bold">
+                    <article key={`${project.title}-${index}`} className=" border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 xl:w-1/2">
+                        <h4 className="text-white-text text-xl font-bold">
                             {project.title}
                         </h4>
                         <div className="flex gap-10 my-5">
@@ -35,7 +35,7 @@ export default function Projects() {
                             <div className="flex flex-wrap gap-1 text-sm opacity-85">
                                 {project.techstack.map((tech, techIndex) => {
                                     return (
-                                        <p key={`project-${index}-techstack-${tech}-${techIndex}`} className="border border-accent rounded-full p-2">
+                                        <p key={`project-${index}-techstack-${tech}-${techIndex}`} className="border border-accent text-white-text rounded-full p-2">
                                             {tech}
                                         </p>
                                     )

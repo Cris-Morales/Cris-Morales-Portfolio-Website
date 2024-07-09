@@ -15,11 +15,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${nunito.className} antialiased scroll-smooth`}>
       <body className={`${nunito.className} antialiased`}>
-        <div className="flex flex-col bg-background" id='home'>
+        <div className="flex flex-col bg-background text-light-text" id='home'>
           <Header />
           {children}
         </div>
-        <div className="z-10 fixed bottom-0 w-screen h-screen bg-background-glow " />
+        <div className="z-10 fixed bottom-0 w-screen h-screen 2xl:bg-background-glow " />
       </body>
     </html>
   );
