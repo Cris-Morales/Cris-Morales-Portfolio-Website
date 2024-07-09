@@ -39,7 +39,6 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "background-glow": "radial-gradient( at bottom right, #32FFB7 -50%, #031026 87%)",
         "header-background-glow": "radial-gradient( at bottom right, #32FFB7 -300%, #031026 65%)"
-
       },
       height: {
         "hero": '105vh',
