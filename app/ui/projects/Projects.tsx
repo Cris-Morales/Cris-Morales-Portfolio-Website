@@ -15,7 +15,7 @@ export default function Projects() {
                         <h4 className="text-white-text text-xl font-bold text-center sm:text-left">
                             {project.title}
                         </h4>
-                        <div className="flex flex-col items-center sm:items-start sm:flex-row gap-10 my-5">
+                        <div className={`flex flex-col items-center sm:items-start sm:flex-row gap-10 my-5 ${!project.screenshot && 'justify-center'}`}>
                             {project.screenshot &&
                                 <div className="border border-accent rounded-xl sm:self-center">
                                     <Image
@@ -24,10 +24,12 @@ export default function Projects() {
                                         width={project.resolutionX}
                                         height={project.resolutionY}
                                         className="rounded-xl w-72 h-auto"
+                                    // play with max height/width and habit pop
+                                    // maybe some js with the height resolution and how we play with width.
                                     />
                                 </div>
                             }
-                            <p className="text-base text-light-text opacity-75 sm:w-3/5 hover:opacity-100 transition-all">
+                            <p className={`text-base text-light-text opacity-75 hover:opacity-100 transition-all ${!project.screenshot ? 'w-full' : 'sm:w-3/5'}`}>
                                 {project.description}
                             </p>
                         </div>
