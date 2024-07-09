@@ -5,7 +5,7 @@ import { techstackIcons } from "@/app/lib/portfolioData"
 export default function Footer() {
 
     return (
-        <footer className="flex flex-col items-center justify-center w-screen min-h-footer gap-4 text-sm md:py-3 py-5">
+        <footer className="flex flex-col items-center justify-center w-full min-h-footer gap-4 text-sm md:py-3 py-5">
             Created by Cristian Morales
             <ul className="flex justify-center gap-2">
 
@@ -47,8 +47,15 @@ export default function Footer() {
                 </li>
             </ul>
             Hosted on Vercel
-            <a href='https://github.com/Cris-Morales'>
-                Checkout the Repo for this Site on my Github
+            <a href='https://github.com/Cris-Morales/Cris-Morales-Portfolio-Website.git' className="flex flex-col justify-center items-center">
+                Checkout the Repo for this Site
+                <Image
+                    src="/github.svg"
+                    alt='through this github link.'
+                    width={32}
+                    height={32}
+                    className=" min-w-8 iconGlow"
+                />
             </a>
         </footer>
     )

@@ -10,7 +10,7 @@ import Footer from "./ui/Footer";
 export default function Page() {
 
   return (
-    <main className="p-content md:flex z-30">
+    <main className="md:flex z-30 ">
       <Navbar />
       <div className="md:flex md:flex-col md:items-center md:w-full">
         <Hero />
