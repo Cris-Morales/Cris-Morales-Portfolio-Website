@@ -16,7 +16,7 @@ export default function AboutMe() {
                         <br /><br />
                         I am currently open to new work opportunities!
                         <br />
-                        <span className='text-primary ml-1 textGlow'>
+                        <span className='text-primary textGlow'>
                             <a href='#contact'>
                                 Let&apos;s create something awesome together :)
                             </a>
