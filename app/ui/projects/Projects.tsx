@@ -11,23 +11,23 @@ export default function Projects() {
             </h3>
             {projects.map((project: projectData, index) => {
                 return (
-                    <article key={`${project.title}-${index}`} className=" border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 xl:w-1/2">
-                        <h4 className="text-white-text text-xl font-bold">
+                    <article key={`${project.title}-${index}`} className="border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 lg:3/5 xl:w-5/12">
+                        <h4 className="text-white-text text-xl font-bold text-center sm:text-left">
                             {project.title}
                         </h4>
-                        <div className="flex gap-10 my-5">
+                        <div className="flex flex-col items-center sm:items-start sm:flex-row gap-10 my-5">
                             {project.screenshot &&
-                                <div className=" w-52 h-auto rounded-xl self-center">
+                                <div className="border border-accent rounded-xl sm:self-center">
                                     <Image
                                         src={project.screenshot}
                                         alt={project.title}
-                                        width={200}
-                                        height={125}
-                                        className="rounded-xl border border-accent w-52 h-auto"
+                                        width={project.resolutionX}
+                                        height={project.resolutionY}
+                                        className="rounded-xl w-72 h-auto"
                                     />
                                 </div>
                             }
-                            <p className="text-base text-light-text opacity-75 w-3/5 hover:opacity-100 transition-all">
+                            <p className="text-base text-light-text opacity-75 sm:w-3/5 hover:opacity-100 transition-all">
                                 {project.description}
                             </p>
                         </div>

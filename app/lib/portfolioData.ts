@@ -57,6 +57,8 @@ export const projects: projectData[] = [
     {
         title: 'Docketeer',
         screenshot: '/projects/docketeer-container-tab-screenshot.png',
+        resolutionX: 1547,
+        resolutionY: 944,
         description: 'A user-friendly container management Docker Desktop extension with intuitive interfaces, and visualization tools for Docker containers and Kubernetes clusters.',
         externalLink: 'https://hub.docker.com/extensions/docketeerxiv/docketeer-extension',
         githubLink: 'https://github.com/open-source-labs/Docketeer-extension.git', // Could I have stars, forks, and Such here?
@@ -65,6 +67,8 @@ export const projects: projectData[] = [
     {
         title: 'Docketeer.io',
         screenshot: '/projects/docketeer-io.png',
+        resolutionX: 1305,
+        resolutionY: 781,
         description: 'A Landing Page for Docketeer, showcasing demos of features, as well as its recent and continuous contributors.',
         externalLink: 'https://docketeer.io/',
         githubLink: null,
@@ -73,6 +77,8 @@ export const projects: projectData[] = [
     {
         title: 'HabitPop',
         screenshot: '/projects/HabitPop-Logo-Dark.png',
+        resolutionX: 900,
+        resolutionY: 900,
         description: 'A Habit Tracking App with a satisfying pop! A personal project inspired by a whiteboard I used to keep hung up in my room to track my various habits. Utilizes Expo for the compiling, routing, and testing.',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/habit365.git',
@@ -81,6 +87,8 @@ export const projects: projectData[] = [
     {
         title: 'Rewatch Time',
         screenshot: '/projects/RewatchTime-Login.png',
+        resolutionX: 1571,
+        resolutionY: 919,
         description: 'Experimental App that randomly selects episodes of the show Adventure Time for you to watch and tracks which episodes you\'ve watched or favorited. Database data, schema, and instance was collected, architected, and launched by myself.',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/Rewatch-Time.git',
@@ -89,6 +97,8 @@ export const projects: projectData[] = [
     {
         title: 'GetSwell',
         screenshot: null,
+        resolutionX: null,
+        resolutionY: null,
         description: 'Positivity-Centric Social Media Fitness App, where our task was to expand the original app to include testing. We achieved 100% backend API testing coverage, and frontend unit and end-to-end testing coverage.',
         externalLink: null,
         githubLink: 'https://github.com/Get-Swell-2-0/get-swell.git',

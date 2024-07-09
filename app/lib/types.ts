@@ -11,6 +11,8 @@ export interface experienceData {
 export interface projectData {
     title: string;
     screenshot: string | null;
+    resolutionX: number | undefined,
+    resolutionY: number | undefined,
     description: string;
     externalLink: string | null;
     githubLink: string | null;
@@ -22,6 +24,7 @@ export interface talksPubsData {
     thumbnail: string | null;
     externalLink: string;
     tag: string;
+
 }
 
 export * from './types'
