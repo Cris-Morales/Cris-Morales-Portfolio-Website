@@ -11,21 +11,20 @@ export default function Projects() {
             </h3>
             {projects.map((project: projectData, index) => {
                 return (
-                    <article key={`${project.title}-${index}`} className="border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 lg:3/5 xl:w-5/12">
+                    <article key={`${project.title}-${index}`} className="border-2 border-primary rounded-3xl p-5 m-5 bg-background bg-opacity-35 boxGlow w-5/6 md:w-2/3 lg:3/5 xl:w-5/12">
                         <h4 className="text-white-text text-xl font-bold text-center sm:text-left">
                             {project.title}
                         </h4>
-                        <div className={`flex flex-col items-center sm:items-start sm:flex-row gap-10 my-5 ${!project.screenshot && 'justify-center'}`}>
+                        <div className={`flex flex-col items-center sm:items-start sm:flex-row  my-5 ${!project.screenshot ? 'justify-center' : 'sm:justify-center'}`}>
                             {project.screenshot &&
-                                <div className="border border-accent rounded-xl sm:self-center">
+                                <div className="rounded-xl sm:self-center sm:w-2/5 flex sm:mr-10 mb-5 sm:mb-0">
                                     <Image
                                         src={project.screenshot}
                                         alt={project.title}
                                         width={project.resolutionX}
                                         height={project.resolutionY}
-                                        className="rounded-xl w-72 h-auto"
-                                    // play with max height/width and habit pop
-                                    // maybe some js with the height resolution and how we play with width.
+                                        className="rounded-xl h-40 w-auto border border-accent "
+                                    // h-40 w-auto
                                     />
                                 </div>
                             }

@@ -76,10 +76,10 @@ export const projects: projectData[] = [
     },
     {
         title: 'HabitPop',
-        screenshot: '/projects/HabitPop-Logo-Dark.png',
-        resolutionX: 900,
-        resolutionY: 900,
-        description: 'A Habit Tracking App with a satisfying pop! A personal project inspired by a whiteboard I used to keep hung up in my room to track my various habits. Utilizes Expo for the compiling, routing, and testing.',
+        screenshot: '/projects/habit-pop-logo-dark-wide.png',
+        resolutionX: 1670,
+        resolutionY: 1000,
+        description: 'A Habit Tracking App with a satisfying pop! A personal project inspired by a whiteboard I used to keep hung up in my room to track my various habits. Utilizes a SQLite instance for tracking habits, routines, streaks, and week frequency, and uses Expo for the compiling, routing, and testing.',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/habit365.git',
         techstack: ['TypeScript', 'React', 'SQLite', 'Expo']
@@ -97,8 +97,8 @@ export const projects: projectData[] = [
     {
         title: 'GetSwell',
         screenshot: null,
-        resolutionX: null,
-        resolutionY: null,
+        resolutionX: undefined,
+        resolutionY: undefined,
         description: 'Positivity-Centric Social Media Fitness App, where our task was to expand the original app to include testing. We achieved 100% backend API testing coverage, and frontend unit and end-to-end testing coverage.',
         externalLink: null,
         githubLink: 'https://github.com/Get-Swell-2-0/get-swell.git',
