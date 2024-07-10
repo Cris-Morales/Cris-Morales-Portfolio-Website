@@ -23,8 +23,7 @@ export default function Projects() {
                                         alt={project.title}
                                         width={project.resolutionX}
                                         height={project.resolutionY}
-                                        className="rounded-xl h-40 w-auto border border-accent "
-                                    // h-40 w-auto
+                                        className="rounded-xl w-64 h-auto border border-accent "
                                     />
                                 </div>
                             }
