@@ -1,6 +1,6 @@
 'use client'
 import 'keen-slider/keen-slider.min.css'
-import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
+import { useKeenSlider } from 'keen-slider/react'
 import { techstackIcons } from "@/app/lib/portfolioData"
 import Image from "next/image"
 import { useReducedMotion } from 'framer-motion'
