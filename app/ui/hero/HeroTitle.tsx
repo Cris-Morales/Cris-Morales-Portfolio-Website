@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion, Variants, useReducedMotion } from "framer-motion"
-const titles: string[] = ['Software', 'Mechanical', 'Fullstack', 'Robotics'];
+const titles: string[] = ['Software', 'Fullstack', 'Robotics', 'Mechanical'];
 
 
 

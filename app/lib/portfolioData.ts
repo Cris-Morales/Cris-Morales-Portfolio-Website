@@ -82,7 +82,7 @@ export const projects: projectData[] = [
         description: 'A Habit Tracking App with a satisfying pop! A personal project inspired by a whiteboard I used to keep hung up in my room to track my various habits. Utilizes a SQLite instance for tracking habits, routines, streaks, and week frequency, and uses Expo for the compiling, routing, and testing.',
         externalLink: null,
         githubLink: 'https://github.com/Cris-Morales/habit365.git',
-        techstack: ['TypeScript', 'React', 'SQLite', 'Expo']
+        techstack: ['TypeScript', 'React', 'React Native', 'SQLite', 'Expo']
     },
     {
         title: 'Rewatch Time',

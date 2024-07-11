@@ -1,4 +1,4 @@
-type tech = 'TypeScript' | 'JavaScript' | 'React' | 'Redux' | 'Node.JS' | 'Express.JS' | 'Jest' | 'Supertest' | 'Docker' | 'TailwindCSS' | 'SASS' | 'PostgreSQL' | 'MongoDB' | 'Expo' | 'SQLite' | 'Next.JS' | 'Grafana' | 'Prometheus' | 'CSS3' | 'HTML5' | 'Git' | 'Vite' | 'Webpack' | 'Cypress' | 'JWT' | 'React Query'
+type tech = 'TypeScript' | 'JavaScript' | 'React' | 'Redux' | 'Node.JS' | 'Express.JS' | 'Jest' | 'Supertest' | 'Docker' | 'TailwindCSS' | 'SASS' | 'PostgreSQL' | 'MongoDB' | 'Expo' | 'SQLite' | 'Next.JS' | 'Grafana' | 'Prometheus' | 'CSS3' | 'HTML5' | 'Git' | 'Vite' | 'Webpack' | 'Cypress' | 'JWT' | 'React Query' | 'React Native'
 
 export interface experienceData {
     company: string;
