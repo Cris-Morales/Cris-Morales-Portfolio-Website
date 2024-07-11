@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Header() {
 
     return (
-        <header className="z-50 flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 2xl:bg-opacity-0 bg-background">
+        <header className="z-50 flex justify-between fixed w-screen h-header py-3 px-4 md:px-7 xl:bg-opacity-0 bg-background">
             <ul className="flex gap-3 items-center">
                 <li>
                     <a href='https://github.com/Cris-Morales' className="iconGlow">

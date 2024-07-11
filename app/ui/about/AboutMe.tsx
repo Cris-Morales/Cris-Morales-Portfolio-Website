@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function AboutMe() {
 
     return (
-        <section id='about' className="max-h-fit min-h-screen flex flex-col items-center justify-center md:scroll-m-14 mb-20 mt-10 w-full">
+        <section id='about' className="max-h-fit min-h-screen flex flex-col items-center justify-center md:scroll-m-14 mb-20 mt-10 border border-error w-full">
             <article className="flex flex-col items-center justify-center lg:flex-row-reverse lg:items-start w-full 2xl:w-2/3 p-2 -mt-10">
                 <div className="lg:w-about-content">
                     <h3 className='text-primary text-3xl ml-10'>
