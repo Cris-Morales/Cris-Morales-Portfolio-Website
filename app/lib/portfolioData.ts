@@ -1,4 +1,4 @@
-import { experienceData, projectData, talksPubsData } from "./types"
+import { experienceData, projectData, talksPubsData, aboutMeImageType } from "./types"
 
 
 export const experience: experienceData[] = [
@@ -140,4 +140,32 @@ export const techstackIcons: string[] = [
     '/techstackIcons/mongo.svg',
     '/techstackIcons/js.svg',
     '/techstackIcons/vb.svg',
+]
+
+
+export const aboutMeImages: aboutMeImageType[] = [
+    {
+        source: '/aboutMe/meAndPartner.jpg',
+        resolutionX: 1331,
+        resolutionY: 1536,
+        alt: 'Me and my wife.',
+    },
+    {
+        source: "/aboutMe/meAndDoggo.jpg",
+        resolutionX: 793,
+        resolutionY: 887,
+        alt: "Me and our family Chonk, I mean Dog, in a tortilla blanket.",
+    },
+    {
+        source: "/aboutMe/jiuJitsuTournament.jpg",
+        resolutionX: 1022,
+        resolutionY: 995,
+        alt: "Me, at my 3rd Grappling Tournament at Blue Belt, getting bronze because I was late to my match against the silver metal winner.",
+    },
+    {
+        source: '/aboutMe/guineaPigs.png',
+        resolutionX: 1029,
+        resolutionY: 725,
+        alt: 'Our three guinea pigs.',
+    }
 ]

@@ -27,4 +27,11 @@ export interface talksPubsData {
 
 }
 
+export interface aboutMeImageType {
+    source: string;
+    resolutionX: number,
+    resolutionY: number,
+    alt: string;
+}
+
 export * from './types'
