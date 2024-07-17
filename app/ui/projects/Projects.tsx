@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function Projects() {
 
     return (
-        <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center md:scroll-m-20 mt-10 text-white-text">
+        <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center scroll-m-20 mt-10 text-white-text">
             <h3 className='text-primary text-3xl'>
                 Projects
             </h3>

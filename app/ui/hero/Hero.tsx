@@ -5,7 +5,7 @@ import HeroTitle from "./HeroTitle"
 export default function Hero() {
 
     return (
-        <section id="hero" className="h-fit flex flex-col items-center justify-center p-hero md:flex-row md:h-hero md:mb-10 gap-10 md:mt-0 mt-5 border border-error">
+        <section id="hero" className="h-fit flex flex-col items-center justify-center p-hero md:flex-row md:h-hero md:mb-10 gap-10 md:mt-0 mt-5">
             <Headshot />
             <div className="w-full h-fit p-4 md:w-5/12 ">
                 <p className=" text-base text-light-text">

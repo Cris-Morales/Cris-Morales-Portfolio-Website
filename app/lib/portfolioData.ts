@@ -164,8 +164,8 @@ export const aboutMeImages: aboutMeImageType[] = [
     },
     {
         source: '/aboutMe/guineaPigs.png',
-        resolutionX: 1029,
-        resolutionY: 725,
+        resolutionX: 1080,
+        resolutionY: 1009,
         alt: 'Our three guinea pigs.',
     }
 ]
