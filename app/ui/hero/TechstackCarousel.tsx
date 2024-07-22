@@ -15,9 +15,9 @@ export default function TechstackCarousel() {
             drag: true,
             renderMode: "performance",
             slides: {
-                number: 17,
-                perView: 7,
-                spacing: 5,
+                number: techstackIcons.length,
+                perView: 6,
+                // spacing: 5,
             },
             mode: 'free-snap',
             created(s) {
@@ -44,13 +44,13 @@ export default function TechstackCarousel() {
         <div ref={sliderRef} className="keen-slider overflow-x-hidden h-14 max-w-carousel min-w-carousel mb-6 mt-3 carousel">
             {techstackIcons.map((icon: string, index: number) => {
                 return (
-                    <div className={`keen-slider__slide number-slide${index} flex justify-center items-center min-w-14`} key={icon}>
+                    <div className={`keen-slider__slide number-slide${index} flex justify-center items-center`} key={icon}>
                         <Image
                             src={icon}
                             alt={icon.slice(16, -4) + 'Icon'}
                             width={50}
                             height={50}
-                            className=''
+                            className='min-w-12 h-auto'
                         />
                     </div>
                 )

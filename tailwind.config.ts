@@ -62,14 +62,14 @@ const config: Config = {
       },
       minWidth: {
         'headshot': '454px',
-        'carousel': '350px'
+        'carousel': '275px'
       },
       maxWidth: {
         'carousel': '515px'
       },
       width: {
         'about-content': '625px',
-        'headshot': '454px',
+        'headshot': '425px',
 
       },
       left: {

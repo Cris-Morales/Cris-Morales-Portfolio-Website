@@ -6,7 +6,7 @@ export default function TalksAndPubs() {
 
     return (
         <section id='talks' className="flex flex-col items-center mb-40 w-full">
-            <h3 className='text-primary text-xl mt-5 mb-10'>
+            <h3 className='text-primary text-xl mt-5 mb-10 font-semibold'>
                 Talks and Publications
             </h3>
             <div className="flex flex-col w-3/5 xl:w-1/3 gap-10">
@@ -31,7 +31,7 @@ export default function TalksAndPubs() {
                                             className="-mt-6 z-10 mr-2 "
                                         />
                                     </div>}
-                                <h5 className="md:w-4/5">&quot;{card.title}&quot;</h5>
+                                <h5 className="md:w-4/5 font-bold">&quot;{card.title}&quot;</h5>
                             </a>
                         </article>
                     );

@@ -6,7 +6,7 @@ export default function Projects() {
 
     return (
         <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center scroll-m-20 mt-10 text-white-text">
-            <h3 className='text-primary text-3xl'>
+            <h3 className='text-primary text-3xl font-semibold'>
                 Projects
             </h3>
             {projects.map((project: projectData, index) => {
@@ -27,7 +27,7 @@ export default function Projects() {
                                     />
                                 </div>
                             }
-                            <p className={`text-base text-light-text opacity-75 hover:opacity-100 transition-all ${!project.screenshot ? 'w-full' : 'sm:w-3/5'}`}>
+                            <p className={`text-base opacity-75 hover:opacity-100 transition-all ${!project.screenshot ? 'w-full' : 'sm:w-3/5'}`}>
                                 {project.description}
                             </p>
                         </div>

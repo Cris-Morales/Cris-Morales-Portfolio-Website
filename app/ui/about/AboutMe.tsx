@@ -7,10 +7,8 @@ export default function AboutMe() {
 
     return (
         <section id='about' className=" min-h-screen max-h-fit flex flex-col items-center mt-10 w-full scroll-m-20">
-            {/* xl:w-10/12 2xl:w-full */}
             <article className="flex flex-col items-center w-full p-5">
-                {/* -mt-10 */}
-                <h3 className='text-primary text-3xl ml-10'>
+                <h3 className='text-primary text-3xl ml-10 font-semibold'>
                     About Me
                 </h3>
                 <div className="w-full flex flex-col xl:w-2/3 xl:flex-row xl:gap-10">
