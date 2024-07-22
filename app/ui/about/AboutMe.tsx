@@ -10,7 +10,7 @@ export default function AboutMe({ font }: { font: NextFont }) {
                     About Me
                 </h3>
                 <div className="w-full flex flex-col xl:w-2/3 xl:flex-row xl:gap-10">
-                    <p className={`${font.className} text-lg font-medium rounded-3xl pl-7 pr-5 py-5 my-5 bg-background bg-opacity-35 boxGlow text-white-text w-full self-start z-10 border-2 border-primary xl:w-1/2`}>
+                    <p className={`${font.className} text-lg font-normal rounded-3xl pl-7 pr-5 py-5 my-5 bg-background bg-opacity-35 boxGlow text-white-text w-full self-start z-10 border-2 border-primary xl:w-1/2`}>
                         I began my professional journey as a Mechanical Engineer, where I first encountered programming through C++ for robotics and controls and MatLab for numerical methods.
                         <br /><br />
                         A few years into my career, I felt a strong pull towards software engineering which led me to diving into JavaScript and web development, ultimately securing a spot with the competitive tech accelerator OSLabs.
