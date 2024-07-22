@@ -29,9 +29,16 @@ export interface talksPubsData {
 
 export interface aboutMeImageType {
     source: string;
-    resolutionX: number,
-    resolutionY: number,
+    resolutionX: number;
+    resolutionY: number;
     alt: string;
+}
+
+export interface techstackIconObj {
+    source: string;
+    resX: number;
+    resY: number;
+
 }
 
 export * from './types'

@@ -11,38 +11,38 @@ export default function Footer() {
 
                 <li>
                     <Image
-                        src={techstackIcons[0]}
-                        alt={techstackIcons[0].slice(16, 26)}
+                        src={techstackIcons[0].source}
+                        alt={techstackIcons[0].source.slice(16, 26)}
                         width={30}
                         height={30}
-                        key={techstackIcons[0]}
+                        key={techstackIcons[0].source}
                     />
                 </li>
                 <li>
                     <Image
-                        src={techstackIcons[1]}
-                        alt={techstackIcons[1].slice(16, 26)}
+                        src={techstackIcons[1].source}
+                        alt={techstackIcons[1].source.slice(16, 26)}
                         width={30}
                         height={30}
-                        key={techstackIcons[1]}
+                        key={techstackIcons[1].source}
                     />
                 </li>
                 <li>
                     <Image
-                        src={techstackIcons[3]}
-                        alt={techstackIcons[3].slice(16, 26)}
+                        src={techstackIcons[3].source}
+                        alt={techstackIcons[3].source.slice(16, 26)}
                         width={30}
                         height={30}
-                        key={techstackIcons[3]}
+                        key={techstackIcons[3].source}
                     />
                 </li>
                 <li>
                     <Image
-                        src={techstackIcons[9]}
-                        alt={techstackIcons[9].slice(16, 26)}
+                        src={techstackIcons[9].source}
+                        alt={techstackIcons[9].source.slice(16, 26)}
                         width={30}
                         height={30}
-                        key={techstackIcons[9]}
+                        key={techstackIcons[9].source}
                     />
                 </li>
             </ul>

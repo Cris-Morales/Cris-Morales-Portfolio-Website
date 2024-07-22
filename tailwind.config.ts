@@ -62,7 +62,7 @@ const config: Config = {
       },
       minWidth: {
         'headshot': '454px',
-        'carousel': '275px'
+        'carousel': '288px'
       },
       maxWidth: {
         'carousel': '515px'

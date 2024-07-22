@@ -1,4 +1,4 @@
-import { experienceData, projectData, talksPubsData, aboutMeImageType } from "./types"
+import { experienceData, projectData, talksPubsData, aboutMeImageType, techstackIconObj } from "./types"
 
 
 export const experience: experienceData[] = [
@@ -121,25 +121,92 @@ export const talksPubs: talksPubsData[] = [
     }
 ]
 
-
-export const techstackIcons: string[] = [
-    '/techstackIcons/typescript.svg',
-    '/techstackIcons/react.svg',
-    '/techstackIcons/redux.svg',
-    '/techstackIcons/next2.svg',
-    '/techstackIcons/node.svg',
-    '/techstackIcons/html5.svg',
-    '/techstackIcons/css3.svg',
-    '/techstackIcons/cpp.svg',
-    '/techstackIcons/pyton.svg',
-    '/techstackIcons/tailwind.svg',
-    '/techstackIcons/postgresql.svg',
-    '/techstackIcons/docker.svg',
-    '/techstackIcons/vite.svg',
-    '/techstackIcons/figma.svg',
-    '/techstackIcons/mongo.svg',
-    '/techstackIcons/js.svg',
-    '/techstackIcons/vb.svg',
+export const techstackIcons: techstackIconObj[] = [
+    {
+        source: '/techstackIcons/typescript.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/react.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/redux.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/next2.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/node.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/html5.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/css3.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/cpp.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/python.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/tailwind.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/postgresql.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/docker.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/vite.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/figma.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/mongo.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/js.svg',
+        resX: 50,
+        resY: 50,
+    },
+    {
+        source: '/techstackIcons/vb.svg',
+        resX: 50,
+        resY: 50,
+    },
 ]
 
 
