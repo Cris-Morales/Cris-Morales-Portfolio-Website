@@ -3,6 +3,7 @@ import { experienceData } from "@/app/lib/types"
 import { useState } from "react"
 import { AnimatePresence, motion, Variants } from 'framer-motion'
 import Image from "next/image"
+import { NextFont } from "next/dist/compiled/@next/font"
 
 const itemVariants: Variants = {
     open: {
@@ -13,7 +14,7 @@ const itemVariants: Variants = {
     closed: { opacity: 0, y: -20 }
 };
 
-export default function ExperienceCard({ data, index }: { data: experienceData, index: number }) {
+export default function ExperienceCard({ data, index, font }: { data: experienceData, index: number, font: NextFont }) {
     const [isExpanded, setExpanded] = useState<boolean>(false);
 
     return (
@@ -31,7 +32,7 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                 {data.bullets.map((bullet: string) => {
                     return (
                         <li key={bullet} className="">
-                            <p className="mb-2 opacity-75 hover:opacity-100 transition-all font-normal">
+                            <p className={`mb-2 opacity-75 hover:opacity-100 transition-all font-normal ${font.className}`}>
                                 {bullet}
                             </p>
                         </li>
@@ -60,7 +61,7 @@ export default function ExperienceCard({ data, index }: { data: experienceData, 
                                     key={`${bullet} - ${index}`}
                                     variants={itemVariants}
                                 >
-                                    <p className="mb-2 opacity-75 hover:opacity-100 transition-all">
+                                    <p className={`mb-2 opacity-75 hover:opacity-100 transition-all ${font.className} font-normal`}>
                                         {bullet}
                                     </p>
                                 </motion.li>

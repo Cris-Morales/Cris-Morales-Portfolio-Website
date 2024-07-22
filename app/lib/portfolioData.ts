@@ -8,7 +8,7 @@ export const experience: experienceData[] = [
         timerange: 'Sep 2024 - Current',
         bullets: [
             'Improved Container Log fetching speed, achieving a 70x improvement in API fetch time per 10,000 logs by optimizing  backend Bash command construction, and message parsing',
-            'Introduced a Dev- Browser mode by configuring Docker Compose YAML files and Node.js, circumventing Docker Desktop limitations by enabling hot module reloading, and saving 16 hours of development time per week',
+            'Introduced a Dev-Browser mode by configuring Docker Compose YAML files and Node.js, circumventing Docker Desktop limitations by enabling hot module reloading, and saving 16 hours of development time per week',
             'Updated the Container Logs Tab using React by adding Date Picker components to give consumers an intuitive interface to filter by a date and time range to access running and stopped container logs',
             'Implemented a Search feature in the Container Logs Tab utilizing React with regular expressions, allowing consumers to search for Container Log messages and select specific rows to export to CSV',
         ],
@@ -61,7 +61,7 @@ export const projects: projectData[] = [
         resolutionY: 944,
         description: 'A user-friendly container management Docker Desktop extension with intuitive interfaces, and visualization tools for Docker containers and Kubernetes clusters.',
         externalLink: 'https://hub.docker.com/extensions/docketeerxiv/docketeer-extension',
-        githubLink: 'https://github.com/open-source-labs/Docketeer-extension.git', // Could I have stars, forks, and Such here?
+        githubLink: 'https://github.com/open-source-labs/Docketeer-extension.git',
         techstack: ['TypeScript', 'React', 'Redux', 'Node.JS', 'Express.JS', 'Docker', 'PostgreSQL', 'Grafana', 'Prometheus']
     },
     {

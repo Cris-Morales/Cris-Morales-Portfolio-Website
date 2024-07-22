@@ -1,8 +1,10 @@
 import { projects } from "@/app/lib/portfolioData"
 import { projectData } from "@/app/lib/types"
 import Image from "next/image"
+import { NextFont } from "next/dist/compiled/@next/font"
 
-export default function Projects() {
+
+export default function Projects({ font }: { font: NextFont }) {
 
     return (
         <section id='projects' className="max-h-fit min-h-screen flex flex-col items-center scroll-m-20 mt-10 text-white-text">
@@ -27,7 +29,7 @@ export default function Projects() {
                                     />
                                 </div>
                             }
-                            <p className={`text-base opacity-75 hover:opacity-100 transition-all ${!project.screenshot ? 'w-full' : 'sm:w-3/5'}`}>
+                            <p className={`text-base font-normal ${font.className} opacity-75 hover:opacity-100 transition-all ${!project.screenshot ? 'w-full' : 'sm:w-3/5'}`}>
                                 {project.description}
                             </p>
                         </div>
@@ -35,7 +37,7 @@ export default function Projects() {
                             <div className="flex flex-wrap gap-1 text-sm opacity-85">
                                 {project.techstack.map((tech, techIndex) => {
                                     return (
-                                        <p key={`project-${index}-techstack-${tech}-${techIndex}`} className="border border-accent text-white-text rounded-full p-2">
+                                        <p key={`project-${index}-techstack-${tech}-${techIndex}`} className={`border border-accent text-white-text font-normal ${font.className} rounded-full p-2`}>
                                             {tech}
                                         </p>
                                     )

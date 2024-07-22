@@ -1,9 +1,7 @@
-import Image from "next/image"
-import { aboutMeImages } from "@/app/lib/portfolioData"
-import { aboutMeImageType } from "@/app/lib/types"
 import AboutMeGrid from "./AboutMeGrid"
+import { NextFont } from "next/dist/compiled/@next/font"
 
-export default function AboutMe() {
+export default function AboutMe({ font }: { font: NextFont }) {
 
     return (
         <section id='about' className=" min-h-screen max-h-fit flex flex-col items-center mt-10 w-full scroll-m-20">
@@ -12,8 +10,8 @@ export default function AboutMe() {
                     About Me
                 </h3>
                 <div className="w-full flex flex-col xl:w-2/3 xl:flex-row xl:gap-10">
-                    <p className="text-lg rounded-3xl pl-7 pr-5 py-5 my-5 bg-background bg-opacity-35 boxGlow text-white-text w-full self-start z-10 border-2 border-primary xl:w-1/2">
-                        I began my professional journey as a Mechanical Engineer, where I first encountered programming through MatLab for numerical methods and C++ for robotics and controls.
+                    <p className={`${font.className} text-lg font-medium rounded-3xl pl-7 pr-5 py-5 my-5 bg-background bg-opacity-35 boxGlow text-white-text w-full self-start z-10 border-2 border-primary xl:w-1/2`}>
+                        I began my professional journey as a Mechanical Engineer, where I first encountered programming through C++ for robotics and controls and MatLab for numerical methods.
                         <br /><br />
                         A few years into my career, I felt a strong pull towards software engineering which led me to diving into JavaScript and web development, ultimately securing a spot with the competitive tech accelerator OSLabs.
                         <br /><br />
@@ -35,20 +33,3 @@ export default function AboutMe() {
         </section>
     )
 }
-
-
-
-// <div className="grid grid-cols-2 py-5 w-full gap-10 z-0">
-//     {aboutMeImages.map((imageData: aboutMeImageType, index: number) =>
-//         <div className="min-w-24 max-w-64 hover:scale-105 duration-300 transition-all" key={imageData.source}>
-//             {/* lg:hover:scale-110 lg:duration-300 lg:transition-all */}
-//             <Image
-//                 src={imageData.source}
-//                 alt={imageData.alt}
-//                 width={imageData.resolutionX}
-//                 height={imageData.resolutionY}
-//                 className="rounded-3xl aboutImageGlow"
-//             />
-//         </div>)
-//     }
-// </div>
