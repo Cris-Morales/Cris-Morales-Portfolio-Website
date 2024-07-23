@@ -18,7 +18,7 @@ export default function Hero() {
                 <div className="carousel ">
                     <TechstackCarousel />
                 </div>
-                <a className="text-dark-text font-bold text-xl bg-primary rounded-3xl h-32 p-3 iconGlow" href='#contact'>
+                <a className="text-dark-text font-bold text-xl bg-primary rounded-full h-32 py-3 px-5 iconGlow" href='#contact'>
                     Work with Me!
                 </a>
             </div>

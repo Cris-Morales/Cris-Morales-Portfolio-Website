@@ -7,7 +7,7 @@ export default function ContactButton({ status, serverError }: { status: string 
     const { pending } = useFormStatus();
     return (
         <>
-            < button type="submit" disabled={pending} className=" text-background text-xl flex justify-center items-center font-bold iconGlow bg-primary w-3/4 rounded-xl my-2 h-8">
+            <button type="submit" disabled={pending} className=" text-background text-xl flex justify-center items-center font-bold iconGlow bg-primary rounded-full my-2 h-8 w-24 px-3 py-6">
                 <AnimatePresence>
                     {pending ?
                         <motion.div
