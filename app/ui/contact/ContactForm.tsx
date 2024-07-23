@@ -41,28 +41,28 @@ export default function ContactForm() {
             }}
                 autoComplete='name'
             />
-            {formState.errors?.name && <span className='text-error -mt-2 mb-2'>{formState.errors.name}</span>}
+            {formState.errors?.name && <span className='text-error -mt-0 mb-2 w-3/4 text-center'>{formState.errors.name}</span>}
             <label htmlFor='email' className="mb-1 text-base font-medium">
                 Email
             </label>
             <input type='email' id="email" name='email' className="rounded-lg bg-background bg-opacity-35 border-2 border-primary py-1 px-2 mb-4 w-3/4" onChange={(event) => {
                 event.target.value.length != 0 ? event.target.classList.add('inputGlow') : event.target.classList.remove('inputGlow');
             }} autoComplete='email' />
-            {formState.errors?.email && <span className='text-error -mt-4 mb-2'>{formState.errors.email}</span>}
+            {formState.errors?.email && <span className='text-error -mt-2 mb-2 w-3/4 text-center'>{formState.errors.email}</span>}
             <label htmlFor='subject' className="mb-1 text-base font-medium" >
                 Subject
             </label>
             <input maxLength={100} type="text" id='subject' name="subject" className="rounded-lg bg-background bg-opacity-35 border-2 border-primary py-1 px-2 mb-4 w-3/4" onChange={(event) => {
                 event.target.value.length != 0 ? event.target.classList.add('inputGlow') : event.target.classList.remove('inputGlow');
             }} />
-            {formState.errors?.subject && <span className='-mt-4 text-error mb-2'>{formState.errors.subject}</span>}
+            {formState.errors?.subject && <span className='-mt-2 text-error mb-2 w-3/4 text-center'>{formState.errors.subject}</span>}
             <label htmlFor='message' className="mb-1 text-base font-medium">
                 Message
             </label>
             <textarea maxLength={1000} id='message' name="message" className="rounded-lg bg-background bg-opacity-35 border-2 border-primary py-2 px-2 mb-4 text-wrap w-3/4 max-h-fit min-h-40" onChange={(event) => {
                 event.target.value.length != 0 ? event.target.classList.add('inputGlow') : event.target.classList.remove('inputGlow');
             }} />
-            {formState.errors?.message && <span className='-mt-4 text-error mb-2'>{formState.errors.message}</span>}
+            {formState.errors?.message && <span className='-mt-2 text-error mb-2 w-3/4 text-center'>{formState.errors.message}</span>}
             <ContactButton status={formState.status} serverError={formState.errors?.server} />
         </form>)
 }

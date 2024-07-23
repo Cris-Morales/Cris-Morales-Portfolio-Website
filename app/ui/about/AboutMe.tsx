@@ -6,7 +6,7 @@ export default function AboutMe({ font }: { font: NextFont }) {
     return (
         <section id='about' className=" min-h-screen max-h-fit flex flex-col items-center mt-10 w-full scroll-m-20">
             <article className="flex flex-col items-center w-full p-5">
-                <h3 className='text-primary text-3xl ml-10 font-semibold'>
+                <h3 className='text-primary text-3xl font-semibold'>
                     About Me
                 </h3>
                 <div className="w-full flex flex-col xl:w-2/3 xl:flex-row xl:gap-10">
