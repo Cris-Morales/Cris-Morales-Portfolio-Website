@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Header />
           {children}
         </div>
-        <div className="z-10 fixed bottom-0 w-screen h-screen bg-background-glow" />
+        <div className="z-10 fixed bottom-0 w-screen h-screen bg-background-glow-mobile md:bg-background-glow" />
       </body>
     </html>
   );
