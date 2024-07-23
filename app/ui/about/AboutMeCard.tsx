@@ -8,9 +8,8 @@ import { useState } from "react"
 export default function AboutMeCard({ imageData }: { imageData: aboutMeImageType }) {
     return (
         <div
-            className="min-w-24 max-w-64 hover:scale-105 duration-300 transition-all"
+            className="min-w-24 max-w-64 hover:scale-105 duration-300 transition-all rounded-3xl"
         >
-            {/* lg:hover:scale-110 lg:duration-300 lg:transition-all */}
             <Image
                 src={imageData.source}
                 alt={imageData.alt}
