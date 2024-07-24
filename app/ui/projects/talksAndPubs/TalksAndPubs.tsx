@@ -22,7 +22,6 @@ export default function TalksAndPubs() {
                                             width={335}
                                             height={225}
                                             className=" rounded-xl relative z-10 w-96 h-auto"
-                                            placeholder="blur"
                                         />
                                         <Image
                                             src="/externalDark.svg"

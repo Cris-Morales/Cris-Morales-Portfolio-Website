@@ -26,7 +26,6 @@ export default function Projects({ font }: { font: NextFont }) {
                                         width={project.resolutionX}
                                         height={project.resolutionY}
                                         className="rounded-xl w-64 h-auto border border-accent"
-                                        placeholder="blur"
                                     />
                                 </div>
                             }
