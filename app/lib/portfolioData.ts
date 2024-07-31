@@ -5,7 +5,7 @@ export const experience: experienceData[] = [
     {
         company: 'Docketeer/OSLabs',
         title: 'Software Engineer',
-        timerange: 'July 2023 - Current',
+        timerange: 'Jul 2023 - Current',
         bullets: [
             'Improved Container Log fetching speed, achieving a 70x improvement in API fetch time per 10,000 logs by optimizing  backend Bash command construction, and message parsing',
             'Introduced a Dev-Browser mode by configuring Docker Compose YAML files and Node.js, circumventing Docker Desktop limitations by enabling hot module reloading, and saving 16 hours of development time per week',
