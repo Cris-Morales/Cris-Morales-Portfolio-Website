@@ -1,11 +1,20 @@
 import { experienceData, projectData, talksPubsData, aboutMeImageType, techstackIconObj } from "./types"
 
+export const hired: boolean = true;
 
 export const experience: experienceData[] = [
     {
+        company: 'Codeware Inc.',
+        title: 'Software Engineer',
+        timerange: 'Sep 2024 - Current',
+        bullets: [
+        ],
+        expandedBullets: null
+    },
+    {
         company: 'Docketeer/OSLabs',
         title: 'Software Engineer',
-        timerange: 'Jul 2023 - Current',
+        timerange: 'Jul 2023 - Jul 2024',
         bullets: [
             'Improved Container Log fetching speed, achieving a 70x improvement in API fetch time per 10,000 logs by optimizing  backend Bash command construction, and message parsing',
             'Introduced a Dev-Browser mode by configuring Docker Compose YAML files and Node.js, circumventing Docker Desktop limitations by enabling hot module reloading, and saving 16 hours of development time per week',
@@ -15,7 +24,7 @@ export const experience: experienceData[] = [
         expandedBullets: [
             'Opted for Redux and Redux Toolkit for efficient state management and utilized Redux Thunk for asynchronous API requests, resulting in clearer state documentation and easier debugging with Redux DevTools',
             'Engineered Container and Kubernetes metric dashboards by configuring Grafana files for constructing dashboards and PromQL to scrape for relevant data, enabling consumers to analyze application performance',
-            'Created a Configurations feature that uses a PostgreSQL instance to store user - defined exposed ports for Prometheus to scrape, allowing consumers more flexibility in defining Kubernetes and Container data collection'
+            'Created a Configurations feature that uses a PostgreSQL instance to store user-defined exposed ports for Prometheus to scrape, allowing consumers more flexibility in defining Kubernetes and Container data collection'
         ]
     },
     {
@@ -30,13 +39,13 @@ export const experience: experienceData[] = [
         expandedBullets: [
             'Redesigned the company\'s main product line, reducing overall volume by 40%, overall weight by 20%, manufacturing time by 30%, and modularizing the design while maintaining structural strength',
             'Demonstrated SOLIDWORKS expertise by managing SOLIDWORKS PDM Administration, providing guidance and direction to other engineers in parts, drawings, and assembly data documentation',
-            'Performed the mechanical design of CNC machined parts, bent sheet metal parts, welded assemblies, and top - level mechanical assemblies utilizing SOLIDWORKS and SOLIDWORKS FEA',
+            'Performed the mechanical design of CNC machined parts, bent sheet metal parts, welded assemblies, and top-level mechanical assemblies utilizing SOLIDWORKS and SOLIDWORKS FEA',
             'Applied AutoCAD, KiCAD and SOLIDWORKS to engineer electronic assembly drawings and schematics, wire harness bundling, electromechanical assemblies and control panel layouts',
             'Advocated for and implemented the improvement of documentation for quality control, standard operating procedures, and folder organization and navigation',
-            'Researched GD& T, structural and chemical properties to implement  additive manufacturing in the latest company product line, saving up to 24 hours of production time per day',
+            'Researched GD&T, structural and chemical properties to implement  additive manufacturing in the latest company product line, saving up to 24 hours of production time per day',
             'Optimized part and stock selection during production, factoring in cost and supply chain availability for current and new mechanical parts and electrical components',
             'Delivered critical guidance and feedback to the Machine Shop, Electronics and Management departments during the production phase, serving as the primary liaison for Engineering',
-            'Managed Epicor ERP software to create bills-of-materials and work-flow standards for production parts and electrical / mechanical assemblies'
+            'Managed Epicor ERP software to create bills-of-materials and work-flow standards for production parts and electrical/mechanical assemblies'
         ]
     },
     {

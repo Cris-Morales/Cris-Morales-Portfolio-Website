@@ -1,5 +1,6 @@
 import AboutMeGrid from "./AboutMeGrid"
 import { NextFont } from "next/dist/compiled/@next/font"
+import { hired } from "@/app/lib/portfolioData"
 
 export default function AboutMe({ font }: { font: NextFont }) {
 
@@ -15,15 +16,32 @@ export default function AboutMe({ font }: { font: NextFont }) {
                         <br /><br />
                         A few years into my career, I felt a strong pull towards software engineering which led me to diving into JavaScript and web development, ultimately securing a spot with the competitive tech accelerator OSLabs.
                         <br /><br />
-                        Today, I am a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 50,000 downloads on DockerHub and 850 stars on GitHub.
-                        <br /><br />
-                        I am currently open to new work opportunities!
-                        <br />
-                        <span className='text-primary textGlow'>
-                            <a href='#contact'>
-                                Let&apos;s create something awesome together :)
-                            </a>
-                        </span>
+                        {hired ?
+                            <>
+                                I was then a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 50,000 downloads on DockerHub and 850 stars on GitHub.
+                                <br /><br />
+                                Today, I am a Software Engineer working at Codeware Inc., engineering design software for building and analyzing pressure vessels.
+                                <br /><br />
+                                I am not currently open to full time work opportunities, but if you have some ideas or products you would like to discuss
+                                <span className='text-primary textGlow ml-1'>
+                                    <a href='#contact'>
+                                        feel free to contact me :)
+                                    </a>
+                                </span>
+                            </>
+                            :
+                            <>
+                                Today, I am a core contributor to the Docker Desktop Extension, Docketeer, which boasts over 50,000 downloads on DockerHub and 850 stars on GitHub.
+                                <br /><br />
+                                I am currently open to new work opportunities!
+                                <br />
+                                <span className='text-primary textGlow'>
+                                    <a href='#contact'>
+                                        Let&apos;s create something awesome together :)
+                                    </a>
+                                </span>
+                            </>
+                        }
                         <br /><br />
                         In my free time, I spend time with my wife, train in various martial arts including Brazilian Jiu-Jitsu, care for my animals, play music and game with my friends.
                     </p>

@@ -1,6 +1,7 @@
 import Headshot from "./Headshot"
 import TechstackCarousel from "./TechstackCarousel"
 import HeroTitle from "./HeroTitle"
+import { hired } from "@/app/lib/portfolioData"
 
 export default function Hero() {
 
@@ -19,7 +20,7 @@ export default function Hero() {
                     <TechstackCarousel />
                 </div>
                 <a className="text-dark-text font-bold text-xl bg-primary rounded-full h-32 py-3 px-5 iconGlow" href='#contact'>
-                    Work with Me!
+                    {hired ? 'Contact Me!' : 'Work with Me!'}
                 </a>
             </div>
         </section>
